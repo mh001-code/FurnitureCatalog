@@ -121,17 +121,6 @@ nav ul li a {
     /* Linha sutil para separação */
 }
 
-.container-12 {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os elementos */
-    align-items: center;
-    /* Centraliza verticalmente */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .grid-logo {
     display: flex;
     align-items: center;
@@ -187,7 +176,7 @@ nav ul li a {
 }
 
 .btn-search:hover {
-    background: #33BBC0;
+    background: #2DA8AB;
     /* Tom mais escuro no hover */
 }
 
@@ -208,7 +197,7 @@ nav ul li a {
     #header-main {
         background-color: #fff;
         border: 3px solid #33BBC0;
-        border-radius: 5%;
+        border-radius: 10px;
         padding-top: 10px;
         padding-bottom: 5px;
     }
@@ -259,7 +248,7 @@ nav ul li a {
     }
 
     .btn-search:hover {
-        background: #33BBC0;
+        background: #2DA8AB;
         /* Tom mais escuro no hover */
     }
 
@@ -269,7 +258,6 @@ nav ul li a {
 
     .mobile-header {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: 0;
@@ -277,17 +265,20 @@ nav ul li a {
     }
 
     .grid-menu-top,
-    .grid-info,
     .grid-logo,
     .element-search,
     .header-2 {
         display: none;
     }
 
-    /* Esconde o menu superior e a logo do desktop */
+    .grid-info {
+        color: white;
+        font-size: 10px;
+    }
 
-    .mobile-header {
-        display: flex;
+    .info-phone a,
+    .info-instagram a {
+        color: #33BBC0;
     }
 
     .menu-icon {
@@ -298,6 +289,28 @@ nav ul li a {
         cursor: pointer;
     }
 
+    .grid-info {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;     /* Centraliza verticalmente */
+        width: 100%;             /* Largura total */
+        padding: 10px 0;         /* Espaçamento interno */
+    }
+
+    .info-inner {
+        display: flex;
+        gap: 50px; /* Espaçamento entre os ícones */
+    }
+
+    .info-phone a, .info-instagram a {
+        color: #33BBC0;
+        font-size: 12px; /* Ajuste do tamanho dos ícones */
+    }
+
+    .mobile-logo {
+        margin-left: auto; /* Isso empurra a logo para a direita */
+    }
+    
     .mobile-logo img {
         height: 40px;
     }
@@ -337,6 +350,7 @@ nav ul li a {
     /* Exibir o menu quando ativo */
     .mobile-menu.active,
     .mobile-search {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 }
