@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de Móveis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="header-main">
+        <div class="header-main-inner">
+            <div class="header-1">
+                <div class="container-12">
+                    <!-- Cabeçalho Mobile -->
+                    <div class="mobile-header">
+                        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+                        <a href="/" class="mobile-logo">
+                            <img src="img/logo.png" alt="Logo" />
+                        </a>
+                    </div>
+
+                    <!-- Menu Mobile -->
+                    <nav class="mobile-menu">
+                        <ul class="menu-list">
+                            <li><a href="/p/quem-somos">Quem Somos</a></li>
+                            <li><a href="/contato">Fale Conosco</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <div class="grid-6 grid-menu-top">
+                        <div class="element-menu-top">
+                            <ul class="menu-top-list">
+                                <li><a href="/p/quem-somos" target="" class="">Quem Somos</a></li>
+                                <li><a href="/contato" target="" class="">Fale Conosco</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="grid-6 grid-info">
+                        <div class="element-info">
+                            <div class="info-inner">
+                                <span class="icon-phone"></span>
+                                <span class="info-phone info-whatsapp"><a
+                                        href="https://api.whatsapp.com/send?phone=556230102579" target="_blank"
+                                        rel="noreferrer"><span class="info-ddd">(62)</span> 3010-2579 <span
+                                            class="info-label-whatsapp">(WhatsApp)</span></a></span>
+
+                                <span class="info-instagram"><a href="instagram">Gilmar Móveis</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-2">
+            <div class="container-12">
+
+                <div class="grid-2 grid-logo">
+                    <div class="element-logo">
+                        <div class="logo">
+                            <a href="/"><img src="img/logo.png" alt="logo" title="logo"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-7 grid-search">
+                    <div class="element-search">
+                        <form action="/busca" id="form-search-header" method="post" accept-charset="utf-8">
+                            <div style="display:none;"><input type="hidden" name="_method" value="POST">
+                            </div>
+                            <div class="search-inner"><input name="data[Search][filter]" autocomplete="off"
+                                    class="search-field" placeholder="o que você procura?" type="text"
+                                    id="SearchFilter"><button class="btn btn-search" type="submit"
+                                    aria-label="O que você procura?"><span class="icon-search btn-icon"></span><span
+                                        class="btn-text">Pesquisar</span></button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-search">
+        <form action="/busca" id="form-search-header" method="post" accept-charset="utf-8">
+            <div style="display:none;"><input type="hidden" name="_method" value="POST">
+            </div>
+            <div class="search-inner"><input name="data[Search][filter]" autocomplete="off" class="search-field"
+                    placeholder="o que você procura?" type="text" id="SearchFilter"><button class="btn btn-search"
+                    type="submit" aria-label="O que você procura?"><span class="icon-search btn-icon"></span><span
+                        class="btn-text">Pesquisar</span></button></div>
+        </form>
+    </div>
+
+
+    <div class="clear"></div>
+
+    <section id="nav-main">
+
+
+        <div class="element-menu-category">
+            <div class="container-12">
+                <div class="grid-12">
+                    <nav id="menu-category">
+                        <div class="menu-category-inner">
+                            <ul class="menu-category-list">
+                                <li class="menu-left"><a href="/" class="link-home">Home</a></li>
+                                <li class="menu-left"><a href="/moveis/guarda-roupas/infantil" class="">INFANTIL</a>
+                                    <ul>
+                                        <li><a href="/moveis/guarda-roupas/infantil/berco" class="">berço</a></li>
+                                        <li><a href="/moveis/guarda-roupas/infantil/comodas" class="">comodas
+                                                infantil</a></li>
+                                        <li><a href="/moveis/guarda-roupas/infantil/gurda-roupa-infantil" class="">gurda
+                                                roupa infantil</a></li>
+                                        <li><a href="/moveis/guarda-roupas/infantil/mini-camas" class="">mini-camas</a>
+                                        </li>
+                                        <li><a href="/moveis/guarda-roupas/infantil/nichos" class="">nichos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-left"><a href="/moveis/guarda-roupas" class="GUARDA-ROUPA">QUARTO</a>
+                                    <ul>
+                                        <li><a href="/moveis/guarda-roupas/guarda-roupas" class="">Guarda-Roupas</a>
+                                        </li>
+                                        <li><a href="/moveis/guarda-roupas/sapateira-multiuso"
+                                                class="">sapateira/multiuso</a></li>
+                                        <li><a href="/moveis/guarda-roupas/beliche" class="">beliche</a></li>
+                                        <li><a href="/moveis/guarda-roupas/comodas" class="">comodas</a></li>
+                                        <li><a href="/moveis/guarda-roupas/cabeceiras-casal" class="">cabeceiras
+                                                casal</a></li>
+                                        <li><a href="/moveis/guarda-roupas/cabeceira-solteiro" class="">cabeceira
+                                                solteiro</a></li>
+                                        <li><a href="/moveis/guarda-roupas/mesa-de-cabeceira" class="">mesa de cabeceira
+                                            </a></li>
+                                        <li><a href="/moveis/guarda-roupas/penteadeira" class="">penteadeira</a></li>
+                                        <li><a href="/moveis/guarda-roupas/camas-casal" class="">camas casal </a></li>
+                                        <li><a href="/moveis/guarda-roupas/colchao" class="">colchao</a></li>
+                                        <li><a href="/moveis/guarda-roupas/bases-box" class="">bases box</a></li>
+                                        <li><a href="/moveis/guarda-roupas/cama-solteiro" class="">cama solteiro</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-left"><a href="/moveis/cozinha" class="">COZINHA</a>
+                                    <ul>
+                                        <li><a href="/moveis/cozinha/balcao" class="">balção</a></li>
+                                        <li><a href="/moveis/cozinha/banqueta" class="">banqueta</a></li>
+                                        <li><a href="/moveis/cozinha/mesas-com-cadeiras" class="">mesas com cadeiras</a>
+                                        </li>
+                                        <li><a href="/moveis/cozinha/bancadas-para-cooktop" class="">bancadas para
+                                                cooktop</a></li>
+                                        <li><a href="/moveis/cozinha/fruteiras" class="">fruteiras</a></li>
+                                        <li><a href="/moveis/cozinha/kit-cozinha" class="">kit cozinha</a></li>
+                                        <li><a href="/moveis/cozinha/cozinhas-completas" class="">cozinhas completas</a>
+                                        </li>
+                                        <li><a href="/moveis/cozinha/armarios-aerios" class="">armarios aerios </a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-left"><a href="/moveis/sala-de-jantar" class="">SALA DE JANTAR</a>
+                                    <ul>
+                                        <li><a href="/moveis/sala-de-jantar/mesas-de-jantar" class="">mesas de
+                                                jantar</a></li>
+                                        <li><a href="/moveis/sala-de-jantar/bufeet" class="">bufeet</a></li>
+                                        <li><a href="/moveis/sala-de-jantar/aparador" class="">aparador </a></li>
+                                        <li><a href="/moveis/sala-de-jantar/cristaleiras" class="">cristaleiras</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-right"><a href="/moveis/escritorio" class="">ESCRITORIO</a>
+                                    <ul>
+                                        <li><a href="/moveis/escritorio/mesas-escrivanhia" class="">mesas/escrivanhia
+                                            </a></li>
+                                        <li><a href="/moveis/escritorio/livreiros" class="">livreiros</a></li>
+                                        <li><a href="/moveis/escritorio/aparador-balcao" class="">APARADOR/BALÇÃO</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-right"><a href="/sala-de-estar" class="">SALA DE ESTAR</a>
+                                    <ul>
+                                        <li><a href="/sala-de-estar/sofas" class="">sofas</a></li>
+                                        <li><a href="/sala-de-estar/paineis" class="">paineis</a></li>
+                                        <li><a href="/sala-de-estar/homes-estantes" class="">homes/estantes</a></li>
+                                        <li><a href="/sala-de-estar/racks" class="">racks </a></li>
+                                        <li><a href="/sala-de-estar/racks-com-paineis" class="">racks com paineis</a>
+                                        </li>
+                                        <li><a href="/sala-de-estar/sofa-cama" class="">sofa cama </a></li>
+                                        <li><a href="/sala-de-estar/poltronas" class="">poltronas</a></li>
+                                        <li><a href="/sala-de-estar/mesa-de-centro" class="">mesa de centro</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-right"><a href="/eletrodomesticos" class="">ELETRODOMESTICOS</a>
+                                    <ul>
+                                        <li><a href="/eletrodomesticos/fogoes" class="">Fogões</a></li>
+                                        <li><a href="/eletrodomesticos/fogoes-cooktop" class="">Fogões Cooktop</a></li>
+                                        <li><a href="/eletrodomesticos/lavadoras" class="">LAVADORAS</a></li>
+                                        <li><a href="/eletrodomesticos/fornos-eletricos" class="">Fornos Eletricos </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474189454610.png" alt="image 1">
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474184517299.png" alt="image 2">
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474187499560.png" alt="image 3">
+            </div>
+
+            <div class="slide">
+                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474184517299.png" alt="image 4">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Minha Loja de Móveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

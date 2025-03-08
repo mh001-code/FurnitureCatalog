@@ -1,0 +1,23 @@
+@import url('header.css');
+@import url('menu.css');
+@import url('banner.css');
+
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mobile-search {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+}

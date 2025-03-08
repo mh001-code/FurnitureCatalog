@@ -1,0 +1,105 @@
+/* Container principal do menu */
+.element-menu-category {
+    background-color: #33BBC0;
+    padding: 10px 0;
+
+}
+
+.menu-category-inner {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.menu-category-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-category-list>li {
+    position: relative;
+}
+
+.menu-category-list a {
+    display: block;
+    padding: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+/* Submenu */
+.menu-category-list ul {
+    position: absolute;
+    top: 100%;
+    padding-left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    display: none;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.menu-category-list li:hover>a {
+    color: #555;
+    /* Cor do item do menu ativo */
+}
+
+
+.menu-category-list li:hover>ul {
+    display: block;
+}
+
+.menu-category-list ul li {
+    padding-left: 0;
+    /* Remove o espaçamento interno dos itens */
+    margin-left: 0;
+    /* Remove a margem à esquerda dos itens */
+    width: 100%;
+}
+
+.menu-category-list ul a {
+    padding: 5px;
+    color: #33BBC0;
+    font-size: 14px;
+    display: block;
+    padding: 5px 8px;
+}
+
+.menu-category-list ul li a {
+    padding-left: 20px;
+    /* Se precisar de um leve espaçamento, ajuste aqui */
+}
+
+.menu-category-list ul a:hover {
+    background: #09b6bc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-category-list {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .menu-category-list>li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-category-list ul {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+}
