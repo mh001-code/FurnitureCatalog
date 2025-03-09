@@ -40,13 +40,16 @@
     top: 100%;
     padding-left: 0;
     background: #fff;
-    list-style: none;
+    flex-direction: column;
     padding: 10px 0;
     min-width: 200px;
-    display: none;
     border-radius: 5px;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
 .menu-category-list li:hover>a {
@@ -56,7 +59,9 @@
 
 
 .menu-category-list li:hover>ul {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .menu-category-list ul li {
