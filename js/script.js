@@ -48,10 +48,39 @@ document.querySelectorAll('input[name="radio-btn"]').forEach((radio, index) => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll('.carousel-container').forEach(container => {
     const carousel = container.querySelector('.carousel');
     const prevBtn = container.querySelector('.prev-btn');
     const nextBtn = container.querySelector('.next-btn');
+
+    function checkScrollLimits() {
+        prevBtn.classList.toggle("disabled", carousel.scrollLeft === 0);
+        nextBtn.classList.toggle("disabled", 
+            carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth
+        );
+    }
+
+     // Adiciona evento ao passar o mouse sobre os botões
+     [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener("mouseenter", () => {
+            if (btn.classList.contains("disabled")) {
+                btn.style.cursor = "not-allowed"; // Ícone de bloqueio
+            } else {
+                btn.style.cursor = "pointer"; // Ícone padrão de clique
+            }
+        });
+
+        btn.addEventListener("mouseleave", () => {
+            btn.style.cursor = ""; // Retorna ao padrão
+        });
+    });
+
+    // Verifica limites ao rolar
+    carousel.addEventListener("scroll", checkScrollLimits);
+
+    // Verifica ao carregar a página
+    checkScrollLimits();
 
     let scrollAmount = 0;
     const scrollStep = 800; // Ajuste o tamanho do scroll conforme necessário
@@ -64,5 +93,5 @@ document.querySelectorAll('.carousel-container').forEach(container => {
         carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
     });
 });
-
+});
 

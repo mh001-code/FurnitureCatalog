@@ -55,6 +55,7 @@
 .menu-category-list li:hover>a {
     color: #555;
     /* Cor do item do menu ativo */
+    font-size: 15px;
 }
 
 

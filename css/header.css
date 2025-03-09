@@ -39,6 +39,16 @@
     /* Mantém os links à esquerda */
 }
 
+
+/* Posicionando a área de atendimento à direita */
+.grid-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha os elementos à direita */
+    color: white;
+    font-size: 14px;
+}
+
 .menu-top-list {
     list-style: none;
     padding: 0;
@@ -55,17 +65,13 @@
 }
 
 .menu-top-list li a:hover {
-    text-decoration: underline;
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    
 }
 
-/* Posicionando a área de atendimento à direita */
-.grid-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alinha os elementos à direita */
-    color: white;
-    font-size: 14px;
-}
 
 .info-inner {
     display: flex;
