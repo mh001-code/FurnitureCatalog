@@ -1,75 +1,94 @@
-element.style {
-}
-#content-main {
-    display: table;
+.vitrine-titulo {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #33BBC0;
+    margin-top: 40px;
     margin-bottom: 20px;
-    width: 100%;
+    margin-left: 20px; /* Ajuste o valor conforme necessário */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-user agent stylesheet
-section {
-    display: block;
-    unicode-bidi: isolate;
+
+.carousel-container {
+    max-width: 90%; /* Define um limite de largura para o carrossel */
+    margin: 0 auto; /* Centraliza na tela */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse */
+    position: relative;
 }
-body {
-    background: #cff8fa;
-    color: #000;
-    font-family: 'open_sans_regular';
-    font-size: 13px;
-    line-height: 20px;
-    -webkit-font-smoothing: antialiased;
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+    overflow: hidden; /* Remove a rolagem horizontal */
 }
-body {
-    font-family: Arial, Sans-serif;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 20px;
+
+.product {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    background: #faffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    scroll-snap-align: center; /* Alinha os produtos ao rolar */
 }
-html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
-    vertical-align: top;
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    outline: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+
+.product img {
+    width: 100%;
+    height: 150px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px;
 }
-:root {
-    --base-color: #344899;
-    --sec-color: #de091e;
-    --btn-color: #52ba3a;
-    --btn-detail-color: #52ba3a;
-    --btn-tellme-color: #de091e;
-    --bg-shop: #ccd4e8;
-    --font-title: open_sans_bold;
-    --font-base: open_sans_regular;
-    --menu-color: #001a70;
-    --menu-text-color: #fff;
-    --footer-color: #b00404;
-    --footer-text-color: #fff;
-    --text-color: #000;
-    --title-color: #fff;
-    --header-color: #344899;
-    --header-text-color: #fff;
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    min-height: 40px; /* Mantém um espaço fixo para o título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-:root {
-    --base-color: #344899;
-    --sec-color: #DE091E;
-    --btn-color: #52BA3A;
-    --btn-detail-color: #52BA3A;
-    --btn-tellme-color: #DE091E;
-    --bg-shop: #ccd4e8;
-    --bg-color: #ccd4e8;
-    --font-title: open_sans_bold;
-    --font-base: open_sans_regular;
-    --menu-color: #001a70;
-    --menu-text-color: #ffffff;
-    --footer-color: #b00404;
-    --footer-text-color: #ffffff;
-    --text-color: #000000;
-    --title-color: #ffffff;
-    --header-color: #344899;
-    --header-text-color: #ffffff;
+
+.product p {
+    font-size: 14px;
+    color: #33BBC0;
+    font-weight: bold;
+}
+
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #33BBC0;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #2DA8AB;
 }

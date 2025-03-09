@@ -1,6 +1,6 @@
 /* Container principal do menu */
 .element-menu-category {
-    background-color: #1cb3b6;
+    background-color: #039396;
     padding: 10px 0;
 
 }
@@ -69,7 +69,7 @@
 
 .menu-category-list ul a {
     padding: 5px;
-    color: #33BBC0;
+    color: #039396;
     font-size: 14px;
     display: block;
     padding: 5px 8px;

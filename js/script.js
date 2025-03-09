@@ -47,3 +47,22 @@ document.querySelectorAll('input[name="radio-btn"]').forEach((radio, index) => {
         resetTimer(index + 1);
     });
 });
+
+document.querySelectorAll('.carousel-container').forEach(container => {
+    const carousel = container.querySelector('.carousel');
+    const prevBtn = container.querySelector('.prev-btn');
+    const nextBtn = container.querySelector('.next-btn');
+
+    let scrollAmount = 0;
+    const scrollStep = 800; // Ajuste o tamanho do scroll conforme necessário
+
+    prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    });
+});
+
+

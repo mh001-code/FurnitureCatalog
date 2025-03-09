@@ -17,6 +17,7 @@
     /* Limite de largura */
     margin: 0 auto;
     /* Centraliza na tela */
+    padding-top: 10px;
     padding-bottom: 10px;
     /* Espaçamento inferior */
 }
@@ -61,8 +62,7 @@
 .grid-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    /* Alinha os elementos à direita */
+    align-items: flex-end; /* Alinha os elementos à direita */
     color: white;
     font-size: 14px;
 }
@@ -70,25 +70,22 @@
 .info-inner {
     display: flex;
     gap: 15px;
-    align-items: flex-end;
-    /* Texto alinhado à direita */
+    align-items: center; /* Alinha os ícones ao centro verticalmente */
 }
 
-.info-phone a,
-.info-instagram a {
-    color: white;
-    text-decoration: none;
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
 }
 
-.info-phone a:hover,
-.info-instagram a:hover {
-    text-decoration: underline;
+.social-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom nos ícones */
 }
 
-.info-label-whatsapp {
-    font-weight: bold;
-    color: #25D366;
-    /* Verde do WhatsApp */
+.icon-phone {
+    /* Exemplo de ícone de telefone */
+    margin-right: 8px;
 }
 
 /* Exibir menu quando ativado */
