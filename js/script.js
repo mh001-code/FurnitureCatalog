@@ -1,6 +1,24 @@
 function toggleMenu() {
-    document.querySelector(".mobile-menu").classList.toggle("active");
+    const menu = document.querySelector('.menu-category-inner');
+    menu.classList.toggle('active');
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) { // Somente em telas menores ou iguais a 768px
+        const menuItems = document.querySelectorAll(".menu-category-list > li > a");
+
+        menuItems.forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault(); // Evita o redirecionamento ao clicar no link
+                const submenu = this.nextElementSibling;
+                if (submenu && submenu.tagName === "UL") {
+                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
+            });
+        });
+    }
+});
+
 
 let count = 1;
 document.getElementById("radio1").checked = true;

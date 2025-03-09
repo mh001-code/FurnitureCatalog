@@ -1,7 +1,7 @@
 #header-main {
     background-color: #33BBC0;
     /* Cor de fundo */
-    padding: 15px 0;
+    padding: 0;
     /* Espaçamento vertical */
 }
 
@@ -194,12 +194,27 @@ nav ul li a {
 /* Exibir apenas no mobile */
 @media (max-width: 768px) {
 
+    .grid-menu-top,
+    .grid-logo,
+    .element-search,
+    .header-2 {
+        display: none;
+    }
+
     #header-main {
         background-color: #fff;
         border: 3px solid #33BBC0;
         border-radius: 10px;
         padding-top: 10px;
         padding-bottom: 5px;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        position: relative;
     }
 
     .mobile-search {
@@ -256,21 +271,6 @@ nav ul li a {
         font-size: 16px;
     }
 
-    .mobile-header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        position: relative;
-    }
-
-    .grid-menu-top,
-    .grid-logo,
-    .element-search,
-    .header-2 {
-        display: none;
-    }
-
     .grid-info {
         color: white;
         font-size: 10px;
@@ -291,14 +291,13 @@ nav ul li a {
 
     .grid-info {
         display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center;     /* Centraliza verticalmente */
-        width: 100%;             /* Largura total */
-        padding: 10px 0;         /* Espaçamento interno */
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        position: relative;
     }
 
     .info-inner {
-        display: flex;
         gap: 50px; /* Espaçamento entre os ícones */
     }
 
@@ -316,41 +315,48 @@ nav ul li a {
     }
 
     /* Estilizando o menu hambúrguer */
-    .mobile-menu {
+    .menu-category-inner {
         display: none;
         position: absolute;
         top: 60px;
         left: 0;
-        width: 100%;
         background: #fff;
         text-align: center;
         flex-direction: column;
-        padding: 10px 0;
+        padding: 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         transition: all 0.3s ease-in-out;
     }
 
-    .menu-list {
+    .menu-category-list {
+        display: none;
         list-style: none;
-        padding: 0;
-        margin: 0;
+
     }
 
-    .menu-list li {
+    .menu-category-list li {
         padding: 10px 0;
     }
 
-    .menu-list li a {
+    .menu-category-list li a {
         color: #333;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .menu-category-list ul {
+        display: none;
     }
 
     /* Exibir o menu quando ativo */
-    .mobile-menu.active,
+    .menu-category-inner.active,
     .mobile-search {
         display: flex;
         flex-direction: column;
+    }
+
+    .menu-category-list li:hover > ul {
+        display: none;
     }
 }
