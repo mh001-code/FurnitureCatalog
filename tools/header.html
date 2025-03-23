@@ -1,0 +1,92 @@
+    <!-- Cabeçalho -->
+    <header id="header-main">
+        <div class="header-main-inner">
+            <div class="header-1">
+                <div class="container-12">
+
+                    <div class="mobile-header">
+                        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+                    </div>
+
+                    <div class="grid-6 grid-menu-top">
+                        <div class="element-menu-top">
+                            <ul class="menu-top-list">
+                                <li><a href="/p/quem-somos" target="" class="">Quem Somos</a></li>
+                                <li><a href="/contato" target="" class="">Fale Conosco</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid-6 grid-info">
+                        <div class="element-info">
+                            <div class="info-inner">
+                                <!-- Ícone do WhatsApp -->
+                                <span class="info-whatsapp">
+                                    <a href="https://wa.link/0osv00" target="_blank"
+                                        rel="noreferrer">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                            alt="WhatsApp" class="social-icon">
+                                    </a>
+                                </span>
+
+                                <!-- Ícone do Instagram -->
+                                <span class="info-instagram">
+                                    <a href="https://instagram.com/moveis.gilmar/" target="_blank" rel="noreferrer">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                            alt="Instagram" class="social-icon">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-header">
+                        <a href="/" class="mobile-logo">
+                            <img src="../img/logo.png" alt="Logo" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header-2">
+            <div class="container-12">
+
+                <div class="grid-2 grid-logo">
+                    <div class="element-logo">
+                        <div class="logo">
+                            <a href="../pages/index.php"><img src="../img/logo.png" alt="logo" title="logo"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-7 grid-search">
+                    <div class="element-search">
+                        <form action="/busca" id="form-search-header" method="post" accept-charset="utf-8">
+                            <div style="display:none;"><input type="hidden" name="_method" value="POST">
+                            </div>
+                            <div class="search-inner"><input name="data[Search][filter]" autocomplete="off"
+                                    class="search-field" placeholder="o que você procura?" type="text"
+                                    id="SearchFilter"><button class="btn btn-search" type="submit"
+                                    aria-label="O que você procura?"><span class="icon-search btn-icon"></span><span
+                                        class="btn-text">Pesquisar</span></button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-search">
+        <form action="/busca" id="form-search-header" method="post" accept-charset="utf-8">
+            <div style="display:none;"><input type="hidden" name="_method" value="POST">
+            </div>
+            <div class="search-inner"><input name="data[Search][filter]" autocomplete="off" class="search-field"
+                    placeholder="o que você procura?" type="text" id="SearchFilter"><button class="btn btn-search"
+                    type="submit" aria-label="O que você procura?"><span class="icon-search btn-icon"></span><span
+                        class="btn-text">Pesquisar</span></button></div>
+        </form>
+    </div>
