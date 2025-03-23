@@ -33,12 +33,25 @@ const produtos = [
   }
   
   // Função para formatar categoria (ex: quarto/guarda-roupas -> Quarto / Guarda-Roupas)
-  function formatarCategoria(titulo) {
-    return titulo
-      .split("/")
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" / ");
+  // Função para formatar a categoria
+function formatarCategoria(categoria) {
+    const partes = categoria.split('/');
+    return partes.map(p => {
+      // Primeira letra maiúscula, resto minúsculo
+      return p.charAt(0).toUpperCase() + p.slice(1).toLowerCase();
+    }).join(' / ');
   }
+
+  // Pegar a categoria da URL
+const urlParams = new URLSearchParams(window.location.search);
+const categoria = urlParams.get('categoria');
+
+if (categoria) {
+  const tituloFormatado = formatarCategoria(categoria);
+  document.title = `${tituloFormatado} - Gilmar Móveis`;
+} else {
+  document.title = 'Gilmar Móveis - Produtos';
+}
   
   // Renderiza produtos conforme categoria
   function renderizarProdutos() {
