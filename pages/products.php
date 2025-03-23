@@ -27,15 +27,13 @@
 
     <div class="clear"></div>
 
-    <div>
-        <?php include '../tools/menu.html'; ?>
-    </div>
+    <?php include '../tools/menu.html'; ?>
 
-    <h1 id="titulo-categoria">Produtos</h1>
-    <div class="produtos-container" id="produtos-container"></div>
+            <h1 id="titulo-categoria">Produtos</h1>
+            <div class="produtos-container" id="produtos-container"></div>
+            </div>
 
-    <div>
-        <?php include '../tools/footer.html'; ?>
+    <?php include '../tools/footer.html'; ?>
     </div>
 
     <script src="../js/products.js"></script>

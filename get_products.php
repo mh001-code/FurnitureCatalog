@@ -1,40 +1,37 @@
 <?php
-// Habilitar o relatório de erros para facilitar a depuração
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-// Cabeçalho indicando que a resposta será em JSON
 header('Content-Type: application/json');
 
-// Código PHP para processar os produtos
+// Conexão com o banco de dados
 $host = 'localhost';
 $dbname = 'gilmar_moveis';
 $user = 'root';
-$pass = '';
+$password = '';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Obter categoria e subcategoria da URL
     $categoria = $_GET['categoria'] ?? '';
-    
-    if (empty($categoria)) {
-        echo json_encode(['erro' => 'Categoria não informada']);
-        exit();
+    $subcategoria = $_GET['subcategoria'] ?? '';
+
+    // Consulta SQL com base nos parâmetros
+    $sql = "SELECT * FROM produtos WHERE categoria = :categoria";
+    if (!empty($subcategoria)) {
+        $sql .= " AND subcategoria = :subcategoria";
     }
 
-    // Consulta segura com prepared statement
-    $stmt = $pdo->prepare("SELECT * FROM produtos WHERE categoria = :categoria");
-    $stmt->execute(['categoria' => $categoria]);
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':categoria', $categoria);
+    if (!empty($subcategoria)) {
+        $stmt->bindParam(':subcategoria', $subcategoria);
+    }
 
+    $stmt->execute();
     $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    if (empty($produtos)) {
-        echo json_encode(['erro' => 'Nenhum produto encontrado']);
-    } else {
-        echo json_encode(['produtos' => $produtos]);
-    }
+    echo json_encode($produtos);
+
 } catch (PDOException $e) {
     echo json_encode(['erro' => 'Erro ao conectar: ' . $e->getMessage()]);
 }
-?>

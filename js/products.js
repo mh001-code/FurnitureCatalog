@@ -1,56 +1,58 @@
-// Função para obter o parâmetro da URL
-function getParametroUrl(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const categoria = params.get('categoria');
+  const subcategoria = params.get('subcategoria'); // pode ser null
 
-// Obter a categoria da URL
-const categoria = getParametroUrl('categoria');
+  // Atualizar título da página
+  const titulo = document.getElementById("titulo-categoria");
+  let tituloPagina = "Produtos";
 
-// Verifique se a categoria foi encontrada
-if (!categoria) {
-  console.error('Categoria não especificada na URL');
-} else {
-  // Atualizar o título da página
-  document.getElementById('titulo-categoria').textContent = `${categoria.charAt(0).toUpperCase() + categoria.slice(1)} - Gilmar Móveis`;
+  if (categoria) {
+    tituloPagina = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+  }
 
-  fetch(`../get_products.php?categoria=${encodeURIComponent(categoria)}`)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Erro na requisição');
-          }
-          return response.json();
-      })
-      .then(data => {
-          console.log(data);  // Verifique os dados que estão sendo recebidos
+  if (subcategoria) {
+    tituloPagina += " - " + subcategoria.charAt(0).toUpperCase() + subcategoria.slice(1);
+  }
 
-          const container = document.getElementById('produtos-container');
+  document.title = `${tituloPagina} - Gilmar Móveis`;
+  titulo.textContent = tituloPagina;
 
-          if (data.erro) {
-              container.textContent = data.erro;
-              return;
-          }
+  // Buscar produtos do PHP
+  let url = `../get_products.php?categoria=${encodeURIComponent(categoria)}`;
+  if (subcategoria) {
+    url += `&subcategoria=${encodeURIComponent(subcategoria)}`;
+  }
 
-          if (!data.produtos || data.produtos.length === 0) {
-              container.textContent = "Nenhum produto encontrado.";
-              return;
-          }
+  fetch(url)
+    .then(response => response.json())
+    .then(produtos => {
+      renderizarProdutos(produtos);
+    })
+    .catch(erro => {
+      console.error("Erro ao buscar produtos:", erro);
+    });
+});
 
-          // Renderizar produtos
-          data.produtos.forEach(produto => {
-              const card = document.createElement('div');
-              card.classList.add('produto-card');
-              card.innerHTML = `
-                  <h3>${produto.nome}</h3>
-                  <img src="${produto.imagem}" alt="${produto.nome}" style="max-width:200px;" />
-                  <p>${produto.descricao}</p>
-                  <p>R$ ${produto.preco}</p>
-              `;
-              container.appendChild(card);
-          });
-      })
-      .catch(error => {
-          console.error('Erro:', error);
-          document.getElementById('produtos-container').textContent = "Erro ao carregar produtos.";
-      });
+// Função para renderizar os produtos na tela
+function renderizarProdutos(produtos) {
+  const container = document.getElementById("produtos-container");
+  container.innerHTML = "";
+
+  if (!produtos || produtos.length === 0) {
+    container.innerHTML = "<p>Nenhum produto encontrado.</p>";
+    return;
+  }
+
+  produtos.forEach(produto => {
+    const card = document.createElement("div");
+    card.className = "produto-card";
+    card.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}">
+      <h3>${produto.nome}</h3>
+      <p>${produto.descricao}</p>
+      <p><strong>R$ ${produto.preco}</strong></p>
+    `;
+    container.appendChild(card);
+  });
 }
