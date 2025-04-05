@@ -30,7 +30,7 @@
     <?php include '../tools/menu.html'; ?>
 
             <h1 id="titulo-categoria">Produtos</h1>
-            <div class="produtos-container" id="produtos-container"></div>
+            <div class="produtos-container" id="produtos-container"
             </div>
 
     <?php include '../tools/footer.html'; ?>

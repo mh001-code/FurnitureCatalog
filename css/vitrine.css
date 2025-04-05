@@ -123,3 +123,14 @@
     opacity: 100%;
     transition: 0.3s ease;
 }
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Adiciona espaçamento entre os produtos */
+    justify-content: center; /* Centraliza os produtos na tela */
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
