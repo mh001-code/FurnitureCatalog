@@ -27,7 +27,7 @@ let interval = setInterval(nextImage, 5000);
 
 function nextImage() {
     count++;
-    if (count > 4) {
+    if (count > 2) {
         count = 1;
     }
     document.getElementById("radio" + count).checked = true;

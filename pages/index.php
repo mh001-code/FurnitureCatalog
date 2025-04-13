@@ -29,34 +29,34 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first">
-                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474189454610.png" alt="image 1">
+                <img src='../img/banner_images/Entrega_montagem.png' alt="image 1">
             </div>
 
-            <div class="slide">
-                <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474184517299.png" alt="image 2">
+           <div class="slide">
+                <img src='../img/banner_images/Parcelamento.png' alt="image 2">
             </div>
 
-            <div class="slide">
+            <!--<div class="slide">
                 <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474187499560.png" alt="image 3">
             </div>
 
             <div class="slide">
                 <img src="https://cdn.dlojavirtual.com/static1/102066/banner/topo_170474184517299.png" alt="image 4">
-            </div>
+            </div>-->
 
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
+                <!--<div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>-->
             </div>
         </div>
 
         <div class="manual-navigation">
             <label for="radio1" class="manual-btn"></label>
             <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+            <!--<label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>-->
         </div>
     </div>
 

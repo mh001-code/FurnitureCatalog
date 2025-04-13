@@ -23,6 +23,10 @@
 
 .slide img {
     width: 100%;
+    height: 420px;
+    /* mantém a proporção original */
+    object-fit: fill;
+    /* ou 'contain', dependendo do que você quer */
 }
 
 .manual-navigation {
