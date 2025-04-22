@@ -1,0 +1,117 @@
+.produto-detalhe {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produto-detalhe h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.imagem-e-preco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.imagem-e-preco img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+}
+
+#preco-produto {
+    font-size: 2em;
+    color: #009688;
+    font-weight: bold;
+    text-align: right;
+    flex: 1 1 200px;
+    margin: 0;
+    line-height: 1.2;
+}
+  
+  #preco-produto .parcelamento {
+    display: block;
+    color: #555;
+    font-size: 1.1rem;
+    margin-top: 0.2rem; /* ou até 0 */
+  }
+
+.produto-detalhe p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+#navegacao-categorias {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  #navegacao-categorias a {
+    color: #039396;
+    text-decoration: none;
+  }
+  
+  #navegacao-categorias a:hover {
+    text-decoration: underline;
+  }
+  
+  .whatsapp-link {
+    text-align: right;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem; /* espaçamento abaixo do botão */
+  }
+  
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05); /* Efeito de zoom nos ícones */
+  }
+  
+  .icon-whatsapp {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-left: 6px;
+  }
+
+  .preco-e-aviso {
+    flex: 1 1 200px;
+    text-align: right;
+    max-width: 30ch; /* Limita o texto a aprox. 60 caracteres */
+}
+
+.aviso-parcelamento {
+    font-weight: bold;
+    font-size: 0.8rem !important;
+    color: #cc0000 !important;
+    text-align: right;
+}
+  

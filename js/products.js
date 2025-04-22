@@ -66,6 +66,7 @@ function renderizarProdutos(produtos) {
     const card = document.createElement("div");
     card.className = "product"; // Usa a classe que já está estilizada no CSS
     card.innerHTML = `
+      <a href="../pages/product.php?id=${produto.id}">
       <img src="${produto.imagem}" alt="${produto.nome}">
       <h3>${produto.nome}</h3>
       <p class="preco"><strong>R$ ${valorFormatado}</strong></p>

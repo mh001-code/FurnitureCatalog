@@ -5,25 +5,31 @@
     color: #333;
     margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 20px; /* Ajuste o valor conforme necessário */
+    margin-left: 20px;
+    /* Ajuste o valor conforme necessário */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 
 .carousel-container {
-    max-width: 90%; /* Define um limite de largura para o carrossel */
-    margin: 0 auto; /* Centraliza na tela */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse */
+    max-width: 90%;
+    /* Define um limite de largura para o carrossel */
+    margin: 0 auto;
+    /* Centraliza na tela */
+    overflow: hidden;
+    /* Evita que o conteúdo ultrapasse */
     position: relative;
-    
+
 }
 
 .carousel {
     display: flex;
     gap: 15px;
-    scroll-behavior: smooth; /* Suaviza a rolagem */
-    overflow: hidden; /* Remove a rolagem horizontal */
+    scroll-behavior: smooth;
+    /* Suaviza a rolagem */
+    overflow: hidden;
+    /* Remove a rolagem horizontal */
 }
 
 .product {
@@ -38,23 +44,38 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 400px;
-    scroll-snap-align: center; /* Alinha os produtos ao rolar */
+    scroll-snap-align: center;
+    /* Alinha os produtos ao rolar */
     margin-bottom: 10px;
+
+    /* Efeito de transição suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    /* Aumenta ligeiramente o tamanho */
+    transform: scale(1.05);
+
+    /* Opcional: adiciona mais sombra ao passar o mouse */
+    box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 .product img {
     width: 100%;
-    height: 150px; /* Define uma altura fixa para todas as imagens */
-    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+    height: 150px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher o espaço sem distorcer */
     border-radius: 8px;
-    
-    
+
+
 }
 
 .product h3 {
     font-size: 16px;
     margin: 10px 0;
-    min-height: 40px; /* Mantém um espaço fixo para o título */
+    min-height: 40px;
+    /* Mantém um espaço fixo para o título */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,6 +105,18 @@
     font-weight: bold;
 }
 
+.product a {
+    text-decoration: none;
+    color: inherit;
+    /* mantém a cor padrão do texto */
+}
+
+.product a:hover {
+    text-decoration: none;
+    /* também remove no hover, se quiser */
+    color: inherit;
+}
+
 .product p {
     font-size: 14px;
     color: #33BBC0;
@@ -91,7 +124,8 @@
 }
 
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -118,7 +152,8 @@
     right: 10px;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
     background: #2DA8AB;
     opacity: 100%;
     transition: 0.3s ease;
@@ -126,11 +161,12 @@
 
 .produtos-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    gap: 20px; /* Adiciona espaçamento entre os produtos */
-    justify-content: center; /* Centraliza os produtos na tela */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px;
+    /* Adiciona espaçamento entre os produtos */
+    justify-content: center;
+    /* Centraliza os produtos na tela */
     align-items: flex-start;
     padding: 20px;
 }
-
-
