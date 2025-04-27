@@ -93,68 +93,114 @@
 /* Responsividade */
 @media (max-width: 768px) {
 
+    /* Menu hambúrguer */
+    .menu-icon {
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Menu principal */
+    .menu-category-inner {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #2DA8AB;
+        text-align: center;
+        padding: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-10px); /* Inicialmente movido para cima */
+        pointer-events: none; /* Impede interação enquanto não está visível */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Menu aberto */
+    .menu-category-inner.active {
+        opacity: 1; /* Torna visível */
+        transform: translateY(0); /* Move para a posição original */
+        pointer-events: all; /* Permite interação com o menu */
+    }
+
+    /* Itens do menu */
+    .menu-category-list > li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Estilizando o menu-top-list */
+    .grid-menu-top {
+        justify-content: center;
+    }
+
+    .element-menu-top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-top-list {
+        gap: 20px;
+    }
+
+    .menu-top-list li {
+        padding: 10px 0;
+    }
+
+    .menu-top-list li a {
+        font-size: 14px;
+    }    
+
     .element-menu-category {
         background-color: #fff;
     }
 
-    /* Ajusta o menu de categorias para uma exibição em coluna */
-    /* Submenu */
-    .menu-category-list ul {
-        display: none;
-        /* Inicialmente escondido */
-        position: absolute;
-        top: 100%;
-        background: #fff;
-        flex-direction: column;
-        padding: 10px 0;
-        min-width: 200px;
-        border-radius: 5px;
-        z-index: 1000;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-        transition: opacity 0.4s ease, transform 0.3s ease;
-    }
-
-    /* Quando o submenu estiver visível */
-    .menu-category-list ul.visible {
-        display: block;
-        /* Mostra o submenu */
-        opacity: 1;
-        /* Define a opacidade para 1 */
-        visibility: visible;
-        /* Torna o submenu visível */
-        transform: translateY(0);
-        /* Remove a transformação de translação */
-    }
-
-    /* Ajusta os itens do menu para ficarem centralizados */
-    .menu-category-list>li {
+    /* Menu Principal */
+    .menu-category-list > li {
         width: 100%;
         text-align: center;
         padding: 10px 0;
     }
 
-    /* Modifica o submenu para que fique visível de forma mais controlada */
+    /* Submenu */
     .menu-category-list ul {
         position: relative;
         width: 100%;
-        /* Faz o submenu ocupar toda a largura disponível */
-        text-align: center;
-        padding: 10px 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 0;
+        min-width: 200px;
+        border-radius: 5px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        overflow: hidden;
         top: auto;
         left: 0;
         box-shadow: none;
-        /* Retira a sombra no submenu */
-        opacity: 1;
-        /* Garante que o submenu seja visível ao clicar */
-        visibility: visible;
-        transform: none;
-        /* Remove o efeito de animação */
+        max-height: 0;
+        text-align: center;
+        transition:
+            opacity 0.4s ease,
+            transform 0.3s ease,
+            max-height 0.6s ease;
     }
 
-    /* Garante que o item do submenu seja responsivo */
+    .menu-category-list ul.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        max-height: 500px; /* Valor alto o suficiente para mostrar o conteúdo */
+    }
+
+    /* Itens do submenu */
     .menu-category-list ul li {
         width: 100%;
         padding: 5px 0;
@@ -164,11 +210,11 @@
     .menu-category-list ul a {
         padding: 8px 0;
         font-size: 16px;
-        /* Aumenta o tamanho da fonte para facilitar a leitura */
     }
 
-    /* Ajuste no hover do submenu */
     .menu-category-list ul a:hover {
         background: #09b6bc;
     }
 }
+
+

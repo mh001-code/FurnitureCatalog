@@ -199,6 +199,7 @@ nav ul li a {
 
 /* Exibir apenas no mobile */
 /* Ajustes adicionais para a responsividade */
+
 @media (max-width: 768px) {
 
     /* Ajustando a altura do logo para telas pequenas */
@@ -226,105 +227,13 @@ nav ul li a {
         padding: 10px;
     }
 
-    /* Menu hambúrguer */
-    .menu-icon {
-        font-size: 30px;
-        /* Aumentado para facilitar o clique */
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    /* Escondendo o menu dentro do mobile-header */
-    .menu-category-inner {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #2DA8AB;
-        text-align: center;
-        flex-direction: column;
-        padding: 0;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* Tornando o menu mobile visível ao clicar */
-    .menu-category-inner.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Melhorando o espaçamento entre os itens do menu */
-    .menu-category-list li {
-        padding: 12px 0;
-    }
-
-    /* Estilizando o menu-top-list */
-    .grid-menu-top {
-        display: flex;
-        justify-content: center;
-        /* Centraliza o conteúdo */
-        align-items: center;
-        /* Alinha verticalmente */
-    }
-
-    .element-menu-top {
-        display: flex;
-        justify-content: center;
-        /* Centraliza a lista de itens */
-        width: 100%;
-        /* Garante que ocupe toda a largura */
-    }
-
-    .menu-top-list {
-        list-style: none;
-        /* Remove os marcadores de lista */
-        padding: 0;
-        margin: 0;
-        display: flex;
-        /* Exibe os itens em linha */
-        gap: 20px;
-        /* Espaçamento entre os itens */
-        justify-content: center;
-        /* Garante que os itens fiquem centralizados */
-    }
-
-    .menu-top-list li {
-        padding: 10px 0;
-    }
-
-    .menu-top-list li a {
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .menu-top-list li a:hover {
-        color: #555;
-        font-size: 15px;
-        font-weight: bold;
-        transition: 0.3s ease;
-    }
-
-
-    /* Barra de pesquisa */
     .search-inner {
         width: 100%;
-        /* Ocupa toda a largura */
     }
 
-    .search-field {
-        font-size: 16px;
-        /* Aumentado para melhor usabilidade */
-    }
-
-    /* Estilo do botão de pesquisa */
+    .search-field,
     .btn-search {
         font-size: 16px;
-        padding: 10px 20px;
     }
 
     /* Ajustando os ícones sociais */
@@ -340,10 +249,8 @@ nav ul li a {
         /* Aumentado para melhorar a legibilidade */
     }
 
-    /* Exibindo a logo de forma centralizada */
     .mobile-logo {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 
     .mobile-logo img {

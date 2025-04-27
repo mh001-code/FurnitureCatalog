@@ -9,17 +9,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuItems.forEach(item => {
             item.addEventListener("click", function (e) {
-                e.preventDefault(); // Evita o redirecionamento ao clicar no link
-
                 const submenu = this.nextElementSibling;
-                // Verifica se o item possui um submenu
+
                 if (submenu && submenu.tagName === "UL") {
-                    submenu.classList.toggle('visible'); // Alterna a classe 'visible' no submenu
+                    e.preventDefault(); // Impede redirecionamento só se tiver submenu
+
+                    const allSubmenus = document.querySelectorAll(".menu-category-list ul");
+
+                    allSubmenus.forEach(openSubmenu => {
+                        if (openSubmenu !== submenu) {
+                            closeSubmenu(openSubmenu);
+                        }
+                    });
+
+                    // Verifica se o submenu já está aberto e alterna entre aberto/fechado
+                    if (submenu.style.maxHeight) {
+                        closeSubmenu(submenu);
+                    } else {
+                        openSubmenu(submenu);
+                    }
+                } else {
+                    // Caso não seja um submenu, faz o redirecionamento normalmente
+                    const href = this.getAttribute('href');
+
+                    if (href && href.includes('index.php')) {
+                        window.location.href = "../pages/index.php"; // Redireciona para Home
+                    } else {
+                        window.location.href = href; // Redireciona normalmente
+                    }
                 }
             });
         });
     }
 });
+
+function openSubmenu(submenu) {
+    submenu.classList.add('visible');
+    submenu.style.maxHeight = submenu.scrollHeight + "px"; // Anima a altura para abrir
+}
+
+function closeSubmenu(submenu) {
+    submenu.classList.remove('visible');
+    submenu.style.maxHeight = null; // Remove a altura para fechar
+}
+
 
 
 let count = 1;

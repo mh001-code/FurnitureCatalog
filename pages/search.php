@@ -81,7 +81,8 @@ try {
     <div>
         <?php include '../tools/footer.html'; ?>
     </div>
-
+    
+    <script src="../js/products.js"></script>
     <script src="../js/script.js"></script>
 
 </body>

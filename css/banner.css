@@ -89,7 +89,3 @@
 #radio2:checked~.navigation-auto .auto-btn2 {
     background: #fff;
 }
-
-@media (max-width: 768px) {
-    
-}

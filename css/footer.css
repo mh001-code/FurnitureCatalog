@@ -88,3 +88,105 @@ footer {
     line-height: 1.2;       /* Diminui o espaço entre as linhas de texto */
     box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões totais */
 }
+
+/* Responsividade para o rodapé */
+@media (max-width: 768px) {
+
+    /* Ajusta o layout do rodapé */
+    footer {
+        padding: 20px; /* Aumenta o padding para dar mais espaçamento */
+        margin: 10px 5px; /* Ajuste das margens */
+        text-align: center; /* Garante o alinhamento central do conteúdo */
+    }
+
+    /* Ajustes na seção de redes sociais */
+    .info-redes-sociais {
+        padding: 20px 10px; /* Reduz o padding para caber melhor em telas pequenas */
+    }
+
+    .info-conteudo h2 {
+        font-size: 20px; /* Reduz o tamanho do título */
+        margin-bottom: 10px;
+    }
+
+    .info-conteudo p {
+        font-size: 16px; /* Reduz o tamanho da descrição */
+    }
+
+    /* Ícones das redes sociais */
+    .social-icon {
+        margin: 0 10px; /* Diminui o espaço entre os ícones */
+    }
+
+    .social-icon img {
+        width: 30px; /* Reduz o tamanho dos ícones */
+        height: 30px;
+    }
+
+    .informacoes-adicionais p {
+        font-size: 14px; /* Reduz o tamanho do texto adicional */
+    }
+
+    .informacoes-adicionais strong {
+        font-size: 16px; /* Ajuste no tamanho do texto em negrito */
+    }
+
+    /* Ajuste no link do WhatsApp */
+    .info-whatsapp-2 {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 5px 8px; /* Ajuste no padding */
+    }
+
+    /* Ícones do WhatsApp */
+    .social-icon-2 {
+        width: 20px; /* Reduz o tamanho do ícone do WhatsApp */
+        height: 20px;
+    }
+
+    /* Ajusta a escala do ícone do WhatsApp ao passar o mouse */
+    .info-whatsapp-2:hover .social-icon-2 {
+        transform: scale(1.1);
+    }
+
+    /* Alinhamento das informações no footer */
+    .redes-sociais {
+        margin-bottom: 15px; /* Diminui o espaçamento abaixo das redes sociais */
+    }
+}
+
+/* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
+@media (max-width: 480px) {
+
+    /* Reduz ainda mais o tamanho do rodapé */
+    footer {
+        padding: 15px 10px; /* Menos padding */
+    }
+
+    /* Ajuste para que o texto não fique esmagado */
+    .info-conteudo h2 {
+        font-size: 18px; /* Tamanho menor para telas menores */
+    }
+
+    .info-conteudo p {
+        font-size: 14px; /* Menor ainda para caber melhor */
+    }
+
+    .social-icon img {
+        width: 25px; /* Ícones menores */
+        height: 25px;
+    }
+
+    .informacoes-adicionais p {
+        font-size: 13px; /* Texto ainda menor */
+    }
+
+    .info-whatsapp-2 {
+        font-size: 13px; /* Tamanho da fonte menor para caber melhor */
+        padding: 4px 7px; /* Ajuste do padding */
+    }
+
+    .social-icon-2 {
+        width: 18px; /* Ícone do WhatsApp ainda menor */
+        height: 18px;
+    }
+}

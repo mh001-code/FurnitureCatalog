@@ -18,7 +18,7 @@
         <?php include '../tools/menu.html'; ?>
     </div>
 
-    <div class="fale-conosco">
+    <div class="extra">
         <h1>Fale Conosco</h1>
         <p>Se você deseja solicitar um orçamento, tirar dúvidas ou enviar sugestões, estamos à disposição para atendê-lo da melhor forma possível.</p>
 

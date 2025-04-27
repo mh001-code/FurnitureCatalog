@@ -1,6 +1,6 @@
-/* Estilo completo para a página Quem Somos */
+/* Estilo completo para a página Fale Conosco */
 
-.about_us {
+.extra {
     max-width: 800px;
     margin: 50px auto;
     padding: 30px;
@@ -11,7 +11,7 @@
 }
 
 /* Título Principal */
-.about_us h1 {
+.extra h1 {
     font-size: 2.4em;
     color: #333;
     text-align: center;
@@ -20,7 +20,7 @@
 }
 
 /* Subtítulos */
-.about_us h2 {
+.extra h2 {
     font-size: 1.6em;
     color: #009688;
     margin-top: 40px;
@@ -29,7 +29,7 @@
 }
 
 /* Parágrafos */
-.about_us p {
+.extra p {
     font-size: 1.1em;
     color: #555;
     line-height: 1.8;
@@ -38,44 +38,55 @@
 }
 
 /* Listas */
-.about_us ul {
+.extra ul {
     list-style-type: disc;
     padding-left: 20px;
     margin-bottom: 20px;
 }
 
-.about_us ul li {
+.extra ul li {
     font-size: 1.05em;
     color: #555;
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
+/* Links dentro da lista */
+.extra a {
+    color: #009688;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
 /* Separador Opcional */
-.about_us hr {
+.extra hr {
     border: 0;
     height: 1px;
     background: #e0e0e0;
     margin: 40px 0;
 }
 
-/* Ajustes de responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
-    .about_us {
+    .extra {
         padding: 20px;
         margin: 30px 15px;
     }
 
-    .about_us h1 {
+    .extra h1 {
         font-size: 2em;
     }
 
-    .about_uss h2 {
+    .extra h2 {
         font-size: 1.4em;
     }
 
-    .about_us p,
-    .about_us ul li {
+    .extra p,
+    .extra ul li {
         font-size: 1em;
     }
 }

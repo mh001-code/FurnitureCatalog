@@ -4,8 +4,7 @@
 @import url('vitrine.css');
 @import url(footer.css);
 @import url('product.css');
-@import url('about_us');
-@import url('talk_to_us.css');
+@import url('extra.css');
 
 /* Reset e configurações globais */
 * {

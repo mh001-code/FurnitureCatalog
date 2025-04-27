@@ -24,6 +24,7 @@
     </div>
 
     <script src="../js/products.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
