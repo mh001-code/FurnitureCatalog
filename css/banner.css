@@ -23,7 +23,7 @@
 
 .slide img {
     width: 100%;
-    height: 420px;
+    height: 360px;
     /* mantém a proporção original */
     object-fit: fill;
     /* ou 'contain', dependendo do que você quer */
@@ -32,7 +32,7 @@
 .manual-navigation {
     position: absolute;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -60px;
     display: flex;
     justify-content: center;
 }
@@ -62,14 +62,6 @@
     margin-left: -25%;
 }
 
-#radio3:checked~.first {
-    margin-left: -50%;
-}
-
-#radio4:checked~.first {
-    margin-left: -75%;
-}
-
 .navigation-auto div {
     border: 2px solid #fff;
     padding: 5px;
@@ -81,7 +73,7 @@
 .navigation-auto {
     position: absolute;
     width: 100%;
-    margin-top: 360px;
+    margin-top: 340px;
     display: flex;
     justify-content: center;
 }
@@ -98,10 +90,6 @@
     background: #fff;
 }
 
-#radio3:checked~.navigation-auto .auto-btn3 {
-    background: #fff;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-    background: #fff;
+@media (max-width: 768px) {
+    
 }

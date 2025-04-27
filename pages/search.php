@@ -1,0 +1,89 @@
+<?php
+// Define o tipo de conteúdo
+header('Content-Type: text/html; charset=utf-8');
+
+// Conexão com o banco (seguindo seu padrão)
+$host = 'localhost';
+$dbname = 'gilmar_moveis';
+$user = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Captura o termo de pesquisa vindo do formulário
+    $pesquisa = $_GET['pesquisa'] ?? '';
+
+    $resultados = [];
+
+    if ($pesquisa) {
+        $stmt = $pdo->prepare("SELECT * FROM produtos WHERE nome LIKE :pesquisa OR descricao LIKE :pesquisa");
+        $stmt->execute(['pesquisa' => '%' . $pesquisa . '%']);
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+} catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da Pesquisa</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <div>
+        <?php include '../tools/header.html'; ?>
+    </div>
+
+    <div>
+        <?php include '../tools/menu.html'; ?>
+    </div>
+
+    <div>
+        <h1>Resultados da Pesquisa</h1>
+
+        <?php if (empty($resultados)) : ?>
+            <p>Nenhum produto encontrado para <strong><?= htmlspecialchars($pesquisa) ?></strong>.</p>
+        <?php else : ?>
+            <div class="produtos-container">
+                <?php foreach ($resultados as $produto) : ?>
+                    <div class="product">
+                        <!-- Link para redirecionar para a página do produto -->
+                        <a href="../pages/product.php?id=<?= $produto['id'] ?>">
+                            <img src="<?= htmlspecialchars($produto['imagem']) ?>" alt="<?= htmlspecialchars($produto['nome']) ?>">
+
+                            <!-- Nome do produto -->
+                            <h3><?= htmlspecialchars($produto['nome']) ?></h3>
+
+                            <!-- Preço -->
+                            <p class="preco"><strong>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></strong></p>
+
+                            <!-- Parcelamento -->
+                            <p class="parcelamento">ou em 5x de R$ <?= number_format($produto['preco'] / 5, 2, ',', '.') ?></p>
+                            <br>
+                            <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
+                        </a>
+                    </div>
+
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+    </div>
+
+    <div>
+        <?php include '../tools/footer.html'; ?>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

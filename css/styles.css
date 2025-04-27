@@ -4,6 +4,8 @@
 @import url('vitrine.css');
 @import url(footer.css);
 @import url('product.css');
+@import url('about_us');
+@import url('talk_to_us.css');
 
 /* Reset e configurações globais */
 * {
@@ -15,6 +17,18 @@
 
 #mobile-search {
     display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0;
+}
+
+/* O conteúdo principal ocupa o espaço restante */
+.main {
+    flex-grow: 1; /* Faz o conteúdo ocupar o máximo de espaço possível */
 }
 
 body{

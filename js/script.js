@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
         menuItems.forEach(item => {
             item.addEventListener("click", function (e) {
                 e.preventDefault(); // Evita o redirecionamento ao clicar no link
+
                 const submenu = this.nextElementSibling;
+                // Verifica se o item possui um submenu
                 if (submenu && submenu.tagName === "UL") {
-                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                    submenu.classList.toggle('visible'); // Alterna a classe 'visible' no submenu
                 }
             });
         });

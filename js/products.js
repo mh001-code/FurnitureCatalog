@@ -71,7 +71,9 @@ function renderizarProdutos(produtos) {
       <h3>${produto.nome}</h3>
       <p class="preco"><strong>R$ ${valorFormatado}</strong></p>
       <p class="parcelamento">ou em 5x de R$ ${valorParcelaFormatado}</p>
-      <p class="desconto">à vista R$ ${valorDescontoFormatado} <span class="economia">Economize 10% no Pix</span></p>
+      <br>
+      <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
+      </p>
     `;
     container.appendChild(card);
   });

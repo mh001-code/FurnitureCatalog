@@ -44,7 +44,8 @@
 .grid-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinha os elementos à direita */
+    align-items: flex-end;
+    /* Alinha os elementos à direita */
     color: white;
     font-size: 14px;
 }
@@ -69,14 +70,15 @@
     font-size: 15px;
     font-weight: bold;
     transition: 0.3s ease;
-    
+
 }
 
 
 .info-inner {
     display: flex;
     gap: 15px;
-    align-items: center; /* Alinha os ícones ao centro verticalmente */
+    align-items: center;
+    /* Alinha os ícones ao centro verticalmente */
 }
 
 .social-icon {
@@ -86,7 +88,8 @@
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Efeito de zoom nos ícones */
+    transform: scale(1.2);
+    /* Efeito de zoom nos ícones */
 }
 
 .icon-phone {
@@ -195,135 +198,51 @@ nav ul li a {
 }
 
 /* Exibir apenas no mobile */
+/* Ajustes adicionais para a responsividade */
 @media (max-width: 768px) {
 
-    .grid-menu-top,
-    .grid-logo,
-    .element-search,
-    .header-2 {
-        display: none;
+    /* Ajustando a altura do logo para telas pequenas */
+    .logo img {
+        max-width: 180px;
+        height: auto;
     }
 
-    #header-main {
-        background-color: #fff;
-        border: 3px solid #33BBC0;
-        border-radius: 10px;
-        padding-top: 10px;
-        padding-bottom: 5px;
+    /* Ajuste no tamanho da fonte para o menu de navegação */
+    nav ul li a {
+        font-size: 14px;
+        /* Menor para caber em telas pequenas */
+    }
+
+    .grid-info {
+        font-size: 12px;
+        /* Reduzido para mobile */
     }
 
     .mobile-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
-        padding: 0;
-        position: relative;
-    }
-
-    .mobile-search {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        /* Faz com que a pesquisa ocupe espaço disponível */
-        justify-content: center;
-        /* Centraliza a pesquisa */
-        margin-top: 8px;
-        margin-bottom: 6px;
-    }
-
-    .search-inner {
-        display: flex;
-        width: auto;
-        /* Largura da barra de pesquisa */
-        max-width: 100%;
-        /* Tamanho máximo da barra de pesquisa */
-        border: 2px solid #33BBC0;
-        border-radius: 20px;
-        /* Bordas arredondadas */
-        overflow: hidden;
-        background: #fff;
-    }
-
-    .search-field {
-        flex: 1;
         padding: 10px;
-        border: none;
-        outline: none;
-        font-size: 14px;
-        color: #333;
     }
 
-    .btn-search {
-        background: #33BBC0;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        border-radius: 0 20px 20px 0;
-    }
-
-    .btn-search:hover {
-        background: #2DA8AB;
-        /* Tom mais escuro no hover */
-    }
-
-    .icon-search {
-        font-size: 16px;
-    }
-
-    .grid-info {
-        color: white;
-        font-size: 10px;
-    }
-
-    .info-phone a,
-    .info-instagram a {
-        color: #33BBC0;
-    }
-
+    /* Menu hambúrguer */
     .menu-icon {
         font-size: 30px;
+        /* Aumentado para facilitar o clique */
         background: none;
         border: none;
-        color: #33BBC0;
+        color: #fff;
         cursor: pointer;
     }
 
-    .grid-info {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        position: relative;
-    }
-
-    .info-inner {
-        gap: 50px; /* Espaçamento entre os ícones */
-    }
-
-    .info-phone a, .info-instagram a {
-        color: #33BBC0;
-        font-size: 12px; /* Ajuste do tamanho dos ícones */
-    }
-
-    .mobile-logo {
-        margin-left: auto; /* Isso empurra a logo para a direita */
-    }
-    
-    .mobile-logo img {
-        height: 40px;
-    }
-
-    /* Estilizando o menu hambúrguer */
+    /* Escondendo o menu dentro do mobile-header */
     .menu-category-inner {
         display: none;
         position: absolute;
         top: 60px;
         left: 0;
-        background: #fff;
+        background: #2DA8AB;
         text-align: center;
         flex-direction: column;
         padding: 0;
@@ -332,34 +251,102 @@ nav ul li a {
         transition: all 0.3s ease-in-out;
     }
 
-    .menu-category-list {
-        display: none;
-        list-style: none;
-
-    }
-
-    .menu-category-list li {
-        padding: 10px 0;
-    }
-
-    .menu-category-list li a {
-        color: #333;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .menu-category-list ul {
-        display: none;
-    }
-
-    /* Exibir o menu quando ativo */
-    .menu-category-inner.active,
-    .mobile-search {
+    /* Tornando o menu mobile visível ao clicar */
+    .menu-category-inner.active {
         display: flex;
         flex-direction: column;
     }
 
-    .menu-category-list li:hover > ul {
-        display: none;
+    /* Melhorando o espaçamento entre os itens do menu */
+    .menu-category-list li {
+        padding: 12px 0;
+    }
+
+    /* Estilizando o menu-top-list */
+    .grid-menu-top {
+        display: flex;
+        justify-content: center;
+        /* Centraliza o conteúdo */
+        align-items: center;
+        /* Alinha verticalmente */
+    }
+
+    .element-menu-top {
+        display: flex;
+        justify-content: center;
+        /* Centraliza a lista de itens */
+        width: 100%;
+        /* Garante que ocupe toda a largura */
+    }
+
+    .menu-top-list {
+        list-style: none;
+        /* Remove os marcadores de lista */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        /* Exibe os itens em linha */
+        gap: 20px;
+        /* Espaçamento entre os itens */
+        justify-content: center;
+        /* Garante que os itens fiquem centralizados */
+    }
+
+    .menu-top-list li {
+        padding: 10px 0;
+    }
+
+    .menu-top-list li a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .menu-top-list li a:hover {
+        color: #555;
+        font-size: 15px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+
+    /* Barra de pesquisa */
+    .search-inner {
+        width: 100%;
+        /* Ocupa toda a largura */
+    }
+
+    .search-field {
+        font-size: 16px;
+        /* Aumentado para melhor usabilidade */
+    }
+
+    /* Estilo do botão de pesquisa */
+    .btn-search {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Ajustando os ícones sociais */
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Ajustes para os ícones de telefone e Instagram */
+    .info-phone a,
+    .info-instagram a {
+        font-size: 14px;
+        /* Aumentado para melhorar a legibilidade */
+    }
+
+    /* Exibindo a logo de forma centralizada */
+    .mobile-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobile-logo img {
+        height: 40px;
     }
 }

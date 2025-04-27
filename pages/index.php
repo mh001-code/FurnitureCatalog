@@ -71,72 +71,72 @@
                         alt="Produto 1">
                     <h3>Rack Paládio</h3>
                     <p class="preco">R$ 409,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 40,90</p>
-                    <p class="desconto">à vista R$ 368,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 81,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-roupeiro-orion-p-1721836837518.jpg"
                         alt="Produto 2">
                     <h3>Roupeiro Orion</h3>
                     <p class="preco">R$ 2.799</p>
-                    <p class="parcelamento">ou em 10x de R$ 279,90</p>
-                    <p class="desconto">à vista R$ 2.519,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 559,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-sala-de-estar-painel-com-detalhes-em-ripado-p-1692192814203.jpeg"
                         alt="Produto 3">
                     <h3>Painel Treviso</h3>
                     <p class="preco">R$ 2.099,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 209,90</p>
-                    <p class="desconto">à vista R$ 1.889,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 419,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-beliche-havana-plus-3-gavetas-p-1693406633270.jpg"
                         alt="Produto 4">
                     <h3>Beliche Havana Plus 3 Gavetas</h3>
                     <p class="preco">R$ 1.499,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 144,90</p>
-                    <p class="desconto">à vista R$ 1.304,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 299,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-guarda-roupa-sorento-c-espelho-p-1701368896196.jpg"
                         alt="Produto 4">
                     <h3>Guarda Roupa Sorento C/ Espelho</h3>
                     <p class="preco">R$ 2.399,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 239,90</p>
-                    <p class="desconto">à vista R$ 2.159,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 479,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img
                         src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-sala-de-estar-sofa-reclinavel-com-acento-retratil-p-1692192029301.jpeg">
                     <h3>Sofá reclinável com acento retrátil 2.40m</h3>
                     <p class="preco">R$ 3.899,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 389,90</p>
-                    <p class="desconto">à vista R$ 3.509,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 779,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-cozinha-cozinha-modulada-intenza-p-1716926543230.png"
                         alt="Produto 4">
                     <h3>COZINHA MODULADA INTENZA</h3>
                     <p class="preco">R$ 1.499,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 149,90</p>
-                    <p class="desconto">à vista R$ 1.349,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 299,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img
                         src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_sala-de-estar-paineis-home-garbo-ripado-p-1707412503202.jpg">
                     <h3>HOME ARBO RIPADO</h3>
                     <p class="preco">R$ 1.599,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 159,90</p>
-                    <p class="desconto">à vista R$ 1.439,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 319,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img
                         src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-comoda-sky-1p-3g-p-1695923548177.jpg">
                     <h3>Comoda Sky 1P 3G</h3>
                     <p class="preco">R$ 459,00</p>
-                    <p class="parcelamento">ou em 10x de R$ 45,90</p>
-                    <p class="desconto">à vista R$ 413,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <p class="parcelamento">ou em 5x de R$ 91,80</p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
             </div>
             <button class="next-btn">&#10095;</button>
@@ -153,7 +153,7 @@
                     <h3>HOME ARBO RIPADO</h3>
                     <p class="preco">R$ 1.599,00</p>
                     <p class="parcelamento">ou em 10x de R$ 159,90</p>
-                    <p class="desconto">à vista R$ 1.439,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img
@@ -161,7 +161,7 @@
                     <h3>Sofá reclinável com acento retrátil 2.40m</h3>
                     <p class="preco">R$ 3.899,00</p>
                     <p class="parcelamento">ou em 10x de R$ 389,90</p>
-                    <p class="desconto">à vista R$ 3.509,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-cozinha-cozinha-modulada-intenza-p-1716926543230.png"
@@ -169,7 +169,7 @@
                     <h3>COZINHA MODULADA INTENZA</h3>
                     <p class="preco">R$ 1.499,00</p>
                     <p class="parcelamento">ou em 10x de R$ 149,90</p>
-                    <p class="desconto">à vista R$ 1.349,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_sala-de-estar-racks-rack-paladio-p-1692372833516.jpg"
@@ -177,7 +177,7 @@
                     <h3>Rack Paládio</h3>
                     <p class="preco">R$ 409,00</p>
                     <p class="parcelamento">ou em 10x de R$ 40,90</p>
-                    <p class="desconto">à vista R$ 368,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img
@@ -185,7 +185,7 @@
                     <h3>Comoda Sky 1P 3G</h3>
                     <p class="preco">R$ 459,00</p>
                     <p class="parcelamento">ou em 10x de R$ 45,90</p>
-                    <p class="desconto">à vista R$ 413,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-sala-de-estar-painel-com-detalhes-em-ripado-p-1692192814203.jpeg"
@@ -193,7 +193,7 @@
                     <h3>Painel Treviso</h3>
                     <p class="preco">R$ 2.099,00</p>
                     <p class="parcelamento">ou em 10x de R$ 209,90</p>
-                    <p class="desconto">à vista R$ 1.889,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-guarda-roupa-sorento-c-espelho-p-1701368896196.jpg"
@@ -201,7 +201,7 @@
                     <h3>Guarda Roupa Sorento C/ Espelho</h3>
                     <p class="preco">R$ 2.399,00</p>
                     <p class="parcelamento">ou em 10x de R$ 239,90</p>
-                    <p class="desconto">à vista R$ 2.159,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-roupeiro-orion-p-1721836837518.jpg"
@@ -209,7 +209,7 @@
                     <h3>Roupeiro Orion</h3>
                     <p class="preco">R$ 2.799</p>
                     <p class="parcelamento">ou em 10x de R$ 279,90</p>
-                    <p class="desconto">à vista R$ 2.519,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
                 <div class="product">
                     <img src="https://cdn.dlojavirtual.com/static1/102066/sku/thumb_moveis-guarda-roupas-beliche-havana-plus-3-gavetas-p-1693406633270.jpg"
@@ -217,7 +217,7 @@
                     <h3>Beliche Havana Plus 3 Gavetas</h3>
                     <p class="preco">R$ 1.499,00</p>
                     <p class="parcelamento">ou em 10x de R$ 144,90</p>
-                    <p class="desconto">à vista R$ 1.304,10 <span class="economia">Economize 10% no Pix</span></p>
+                    <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                 </div>
             </div>
             <button class="next-btn">&#10095;</button>

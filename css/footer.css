@@ -82,5 +82,9 @@ footer {
     background: #33BBC0;
     color: #FFFFFF;
     text-align: center;
-    padding: 10px 0;
+    margin-top: auto;  /* Faz o rodapé ficar no final */
+    padding: 10px;          /* Diminui o espaço interno */
+    margin: 5px;            /* Diminui o espaço externo */
+    line-height: 1.2;       /* Diminui o espaço entre as linhas de texto */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões totais */
 }

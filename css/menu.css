@@ -92,20 +92,83 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .menu-category-list {
-        flex-direction: column;
-        align-items: center;
-        
+
+    .element-menu-category {
+        background-color: #fff;
     }
 
+    /* Ajusta o menu de categorias para uma exibição em coluna */
+    /* Submenu */
+    .menu-category-list ul {
+        display: none;
+        /* Inicialmente escondido */
+        position: absolute;
+        top: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 10px 0;
+        min-width: 200px;
+        border-radius: 5px;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease, transform 0.3s ease;
+    }
+
+    /* Quando o submenu estiver visível */
+    .menu-category-list ul.visible {
+        display: block;
+        /* Mostra o submenu */
+        opacity: 1;
+        /* Define a opacidade para 1 */
+        visibility: visible;
+        /* Torna o submenu visível */
+        transform: translateY(0);
+        /* Remove a transformação de translação */
+    }
+
+    /* Ajusta os itens do menu para ficarem centralizados */
     .menu-category-list>li {
         width: 100%;
         text-align: center;
+        padding: 10px 0;
     }
 
+    /* Modifica o submenu para que fique visível de forma mais controlada */
     .menu-category-list ul {
         position: relative;
         width: 100%;
+        /* Faz o submenu ocupar toda a largura disponível */
         text-align: center;
+        padding: 10px 0;
+        top: auto;
+        left: 0;
+        box-shadow: none;
+        /* Retira a sombra no submenu */
+        opacity: 1;
+        /* Garante que o submenu seja visível ao clicar */
+        visibility: visible;
+        transform: none;
+        /* Remove o efeito de animação */
+    }
+
+    /* Garante que o item do submenu seja responsivo */
+    .menu-category-list ul li {
+        width: 100%;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .menu-category-list ul a {
+        padding: 8px 0;
+        font-size: 16px;
+        /* Aumenta o tamanho da fonte para facilitar a leitura */
+    }
+
+    /* Ajuste no hover do submenu */
+    .menu-category-list ul a:hover {
+        background: #09b6bc;
     }
 }
