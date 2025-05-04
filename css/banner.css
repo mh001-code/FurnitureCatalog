@@ -89,3 +89,13 @@
 #radio2:checked~.navigation-auto .auto-btn2 {
     background: #fff;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .slides {
+        height: 250px; /* Reduz a altura para dispositivos menores */
+    }
+    .slide img {
+        height: 230px; /* Reduz a altura para dispositivos menores */
+    }
+}

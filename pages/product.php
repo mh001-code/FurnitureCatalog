@@ -15,17 +15,6 @@
         <?php include '../tools/header.html'; ?>
     </div>
 
-    <div class="mobile-search">
-        <form action="/busca" id="form-search-header" method="post" accept-charset="utf-8">
-            <div style="display:none;"><input type="hidden" name="_method" value="POST">
-            </div>
-            <div class="search-inner"><input name="data[Search][filter]" autocomplete="off" class="search-field"
-                    placeholder="o que você procura?" type="text" id="SearchFilter"><button class="btn btn-search"
-                    type="submit" aria-label="O que você procura?"><span class="icon-search btn-icon"></span><span
-                        class="btn-text">Pesquisar</span></button></div>
-        </form>
-    </div>
-
     <div class="clear"></div>
 
     <?php include '../tools/menu.html'; ?>

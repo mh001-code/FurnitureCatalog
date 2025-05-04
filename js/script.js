@@ -1,6 +1,8 @@
 function toggleMenu() {
     const menu = document.querySelector('.menu-category-inner');
+    console.log("Toggle menu clicked"); // Log para verificar se a função é chamada
     menu.classList.toggle('active');
+    console.log("Menu active class toggled:", menu.classList.contains('active')); // Log para verificar se a classe 'active' está sendo aplicada
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuItems.forEach(item => {
             item.addEventListener("click", function (e) {
+                console.log("Menu item clicked:", this); // Log para ver qual item do menu foi clicado
                 const submenu = this.nextElementSibling;
 
                 if (submenu && submenu.tagName === "UL") {
@@ -31,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     // Caso não seja um submenu, faz o redirecionamento normalmente
                     const href = this.getAttribute('href');
-
+                    console.log("Redirecting to:", href); // Log de redirecionamento
                     if (href && href.includes('index.php')) {
                         window.location.href = "../pages/index.php"; // Redireciona para Home
                     } else {
@@ -44,15 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openSubmenu(submenu) {
+    console.log("Opening submenu:", submenu); // Log para verificar quando o submenu é aberto
     submenu.classList.add('visible');
     submenu.style.maxHeight = submenu.scrollHeight + "px"; // Anima a altura para abrir
 }
 
 function closeSubmenu(submenu) {
+    console.log("Closing submenu:", submenu); // Log para verificar quando o submenu é fechado
     submenu.classList.remove('visible');
     submenu.style.maxHeight = null; // Remove a altura para fechar
 }
-
 
 
 let count = 1;
@@ -129,4 +133,3 @@ document.querySelectorAll('.carousel-container').forEach(container => {
     });
 });
 });
-

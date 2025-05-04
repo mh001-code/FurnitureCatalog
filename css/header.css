@@ -24,13 +24,14 @@
 
 .container-12 {
     display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha quando precisar */
     justify-content: space-between;
-    /* Mantém os itens divididos (esquerda e direita) */
     align-items: center;
-    /* Centraliza verticalmente */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; /* Adiciona espaço interno */
+    box-sizing: border-box; /* Muito importante */
 }
 
 .grid-menu-top {
@@ -128,6 +129,7 @@ nav ul li a {
 }
 
 .grid-logo {
+    flex: 1 1 200px; /* Logo ocupa o mínimo necessário */
     display: flex;
     align-items: center;
 }
@@ -139,11 +141,10 @@ nav ul li a {
 }
 
 .grid-search {
+    flex: 2 1 600px; /* Pesquisa ocupa mais espaço */
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    justify-content: left;
-    width: 100%;
+    justify-content: center;
 }
 
 .element-search {
@@ -153,11 +154,12 @@ nav ul li a {
 .search-inner {
     display: flex;
     width: 100%;
-    max-width: 100%;
+    max-width: 700px;
     border: 2px solid #33BBC0;
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
+    box-sizing: border-box;
 }
 
 .search-field {
@@ -173,7 +175,7 @@ nav ul li a {
     background: #33BBC0;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -192,8 +194,7 @@ nav ul li a {
 
 /* Esconde o menu no desktop */
 .mobile-header,
-.mobile-menu,
-.mobile-search {
+.mobile-menu {
     display: none;
 }
 
@@ -206,35 +207,42 @@ nav ul li a {
 
 /* Exibir apenas no mobile */
 /* Ajustes adicionais para a responsividade */
-
 @media (max-width: 768px) {
 
-    /* Ajustando a altura do logo para telas pequenas */
-    .logo img {
-        max-width: 50px;
-        height: auto;
-    }
-
-    /* Ajuste no tamanho da fonte para o menu de navegação */
-    nav ul li a {
-        font-size: 14px;
-        /* Menor para caber em telas pequenas */
-    }
-
-    .grid-info {
-        font-size: 12px;
-        /* Reduzido para mobile */
-    }
-
     .mobile-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+        display: block; /* Torna visível no mobile */
+        position: absolute; /* Coloca o ícone de menu fora do fluxo normal */
+        top: 70px; /* Ajuste a distância do topo */
+        left: 10px; /* Ajuste a distância da borda direita */
+        z-index: 3000; /* Garante que fique acima de outros elementos */
     }
 
+    .container-12 {
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .menu-top-list li a:hover {
+        color: #33BBC0;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
+    }
+
+    /* Ajuste para o logo e campo de busca */
+    .grid-logo,
     .grid-search {
         width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 
     .element-search {
@@ -244,40 +252,30 @@ nav ul li a {
     .search-inner {
         width: 100%;
         max-width: 100%;
-        border: 2px solid #33BBC0;
-        border-radius: 20px;
-        overflow: hidden;
-        background: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .search-field {
-        font-size: 14px;
+        flex: 1;
         padding: 10px;
+        font-size: 16px;
     }
 
     .btn-search {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 16px;
     }
 
-    /* Ajustando os ícones sociais */
-    .social-icon {
-        width: 35px;
-        height: 35px;
+    .element-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    /* Ajustes para os ícones de telefone e Instagram */
-    .info-phone a,
-    .info-instagram a {
-        font-size: 14px;
-        /* Aumentado para melhorar a legibilidade */
-    }
-
-    .mobile-logo {
-        margin: 0 auto;
-    }
-
-    .mobile-logo img {
-        height: 40px;
+    .logo img {
+        max-width: 150px;
+        height: auto;
     }
 }

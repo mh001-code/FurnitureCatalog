@@ -98,8 +98,9 @@
         font-size: 30px;
         background: none;
         border: none;
-        color: #fff;
         cursor: pointer;
+        z-index: 1000;
+        color: #02696b;
     }
 
     /* Menu principal */
@@ -107,28 +108,39 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 55px;
         left: 0;
         background: #2DA8AB;
         text-align: center;
         padding: 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        opacity: 0; /* Começa invisível */
-        transform: translateY(-10px); /* Inicialmente movido para cima */
-        pointer-events: none; /* Impede interação enquanto não está visível */
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 2000;
+        opacity: 0;
+        /* Começa invisível */
+        transform: translateY(-10px) scaleX(0);
+        /* Inicialmente movido para cima e com largura 0 */
+        pointer-events: none;
+        /* Impede interação enquanto não está visível */
+        transition: opacity 0.5s ease, transform 0.5s ease, width 0.5s ease;
+        /* Adicionando transição para a largura */
+        width: 0%;
+        /* Inicialmente com largura 0 */
     }
 
     /* Menu aberto */
     .menu-category-inner.active {
-        opacity: 1; /* Torna visível */
-        transform: translateY(0); /* Move para a posição original */
-        pointer-events: all; /* Permite interação com o menu */
+        opacity: 1;
+        /* Torna visível */
+        transform: translateY(0) scaleX(1);
+        /* Move para a posição original e faz a transição da largura */
+        pointer-events: all;
+        /* Permite interação com o menu */
+        width: 100%;
+        /* A largura ocupa todo o espaço disponível */
     }
 
     /* Itens do menu */
-    .menu-category-list > li {
+    .menu-category-list>li {
         width: 100%;
         text-align: center;
         padding: 10px 0;
@@ -155,14 +167,14 @@
 
     .menu-top-list li a {
         font-size: 14px;
-    }    
+    }
 
     .element-menu-category {
         background-color: #fff;
     }
 
     /* Menu Principal */
-    .menu-category-list > li {
+    .menu-category-list>li {
         width: 100%;
         text-align: center;
         padding: 10px 0;
@@ -197,7 +209,8 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        max-height: 500px; /* Valor alto o suficiente para mostrar o conteúdo */
+        max-height: 500px;
+        /* Valor alto o suficiente para mostrar o conteúdo */
     }
 
     /* Itens do submenu */
@@ -216,5 +229,3 @@
         background: #09b6bc;
     }
 }
-
-

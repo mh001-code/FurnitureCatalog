@@ -1,20 +1,14 @@
 <?php
 header('Content-Type: application/json');
 
-// Conexão com o banco de dados
-$host = 'localhost';
-$dbname = 'gilmar_moveis';
-$user = 'root';
-$password = '';
+// Inclui o arquivo de conexão
+include 'conection.php'; // Inclui a conexão com o banco
+
+// Obter categoria e subcategoria da URL
+$categoria = $_GET['categoria'] ?? '';
+$subcategoria = $_GET['subcategoria'] ?? '';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Obter categoria e subcategoria da URL
-    $categoria = $_GET['categoria'] ?? '';
-    $subcategoria = $_GET['subcategoria'] ?? '';
-
     // Consulta SQL com base nos parâmetros
     $sql = "SELECT * FROM produtos WHERE categoria = :categoria";
     if (!empty($subcategoria)) {
@@ -30,8 +24,11 @@ try {
     $stmt->execute();
     $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    // Retorna os produtos em formato JSON
     echo json_encode($produtos);
 
 } catch (PDOException $e) {
+    // Caso ocorra erro na consulta ou na conexão
     echo json_encode(['erro' => 'Erro ao conectar: ' . $e->getMessage()]);
 }
+?>
