@@ -4,13 +4,13 @@ include 'conection.php';
 
 // Consulta para pegar os produtos destacados
 try {
-    $sql = "SELECT * FROM produtos WHERE destaque = 1"; // Consulta para produtos destacados
+    $sql = "SELECT * FROM produtos WHERE destaque = 1 ORDER BY id DESC"; // Consulta para produtos destacados
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $destaques = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Consulta para pegar os produtos mais vendidos
-    $sqlMaisVendidos = "SELECT * FROM produtos WHERE mais_vendido = 1"; // Ajuste o número conforme necessário
+    $sqlMaisVendidos = "SELECT * FROM produtos WHERE mais_vendido = 1 ORDER BY id ASC";
     $stmtMaisVendidos = $pdo->prepare($sqlMaisVendidos);
     $stmtMaisVendidos->execute();
     $maisVendidos = $stmtMaisVendidos->fetchAll(PDO::FETCH_ASSOC);
@@ -48,6 +48,8 @@ try {
                         <h3><?= $produto['nome']; ?></h3>
                         <p class="preco"><?= 'R$ ' . number_format($produto['preco'], 2, ',', '.'); ?></p>
                         <p class="parcelamento">ou em 5x de R$ <?= $valorParcela; ?></p>
+                        <br>
+                        <br>
                         <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                     </a>
                 </div>
@@ -71,6 +73,8 @@ try {
                         <h3><?= $produto['nome']; ?></h3>
                         <p class="preco"><?= 'R$ ' . number_format($produto['preco'], 2, ',', '.'); ?></p>
                         <p class="parcelamento">ou em 5x de R$ <?= $valorParcela; ?></p>
+                        <br>
+                        <br>
                         <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
                     </a>
                 </div>

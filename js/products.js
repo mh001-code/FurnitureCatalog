@@ -72,6 +72,7 @@ function renderizarProdutos(produtos) {
       <p class="preco"><strong>R$ ${valorFormatado}</strong></p>
       <p class="parcelamento">ou em 5x de R$ ${valorParcelaFormatado}</p>
       <br>
+      <br>
       <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
       </p>
     `;

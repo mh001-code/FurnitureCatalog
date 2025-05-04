@@ -6,11 +6,8 @@ error_reporting(E_ALL);
 
 header('Content-Type: application/json');
 
-// Conexão com o banco de dados
-$host = 'localhost';
-$dbname = 'gilmar_moveis';
-$user = 'root';
-$password = '';
+// Inclui o arquivo de conexão
+include 'conection.php'; // Inclui a conexão com o banco
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);

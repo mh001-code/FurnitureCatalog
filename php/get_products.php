@@ -10,7 +10,7 @@ $subcategoria = $_GET['subcategoria'] ?? '';
 
 try {
     // Consulta SQL com base nos parâmetros
-    $sql = "SELECT * FROM produtos WHERE categoria = :categoria";
+    $sql = "SELECT * FROM produtos WHERE categoria = :categoria ORDER BY id DESC;";
     if (!empty($subcategoria)) {
         $sql .= " AND subcategoria = :subcategoria";
     }

@@ -122,7 +122,7 @@ document.querySelectorAll('.carousel-container').forEach(container => {
     checkScrollLimits();
 
     let scrollAmount = 0;
-    const scrollStep = 800; // Ajuste o tamanho do scroll conforme necessário
+    const scrollStep = window.innerWidth < 768 ? 200 : 400;
 
     prevBtn.addEventListener('click', () => {
         carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });

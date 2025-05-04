@@ -2,11 +2,8 @@
 // Define o tipo de conteúdo
 header('Content-Type: text/html; charset=utf-8');
 
-// Conexão com o banco (seguindo seu padrão)
-$host = 'localhost';
-$dbname = 'gilmar_moveis';
-$user = 'root';
-$password = '';
+// Inclui o arquivo de conexão
+include '../php/conection.php'; // Inclui a conexão com o banco
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
@@ -18,7 +15,7 @@ try {
     $resultados = [];
 
     if ($pesquisa) {
-        $stmt = $pdo->prepare("SELECT * FROM produtos WHERE nome LIKE :pesquisa OR descricao LIKE :pesquisa");
+        $stmt = $pdo->prepare("SELECT * FROM produtos WHERE nome LIKE :pesquisa OR subcategoria LIKE :pesquisa");
         $stmt->execute(['pesquisa' => '%' . $pesquisa . '%']);
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
