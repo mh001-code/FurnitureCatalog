@@ -9,6 +9,7 @@
     width: 400%;
     height: 400px;
     display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slides input {
@@ -18,7 +19,7 @@
 .slide {
     width: 25%;
     position: relative;
-    transition: 2s;
+    transition: 2s ease-in-out;
 }
 
 .slide img {
@@ -27,6 +28,11 @@
     /* mantém a proporção original */
     object-fit: fill;
     /* ou 'contain', dependendo do que você quer */
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.02);
 }
 
 .manual-navigation {
@@ -91,7 +97,17 @@
 }
 
 /* Responsividade */
+
+@media (min-width: 1400px) {
+    .slider {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
+    .manual-navigation {
+        display: none;
+    }
     .slides {
         height: 250px; /* Reduz a altura para dispositivos menores */
     }

@@ -80,6 +80,12 @@
     .extra h1 {
         font-size: 2em;
     }
+    
+    
+    .extra a {
+        font-size: 15px;
+    }
+
 
     .extra h2 {
         font-size: 1.4em;

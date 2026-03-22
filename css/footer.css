@@ -1,5 +1,6 @@
 .info-redes-sociais {
-    background-color: #d0f5f7; /* Cor de fundo suave */
+    background-color: #d0f5f7;
+    /* Cor de fundo suave */
     padding: 40px 20px;
     text-align: center;
     margin-top: 40px;
@@ -52,7 +53,8 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 2px; /* Espaço entre o número e o ícone */
+    gap: 2px;
+    /* Espaço entre o número e o ícone */
     padding: 5px 10px;
     border-radius: 5px;
     transition: background 0.3s ease;
@@ -77,16 +79,34 @@
     transition: 0.3s ease;
 }
 
+.email {
+    display: inline-flex;
+    color: #333;
+    transition: 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.email:hover {
+    transform: scale(1.1);
+}
+
 /* Rodapé */
 footer {
     background: #33BBC0;
-    color: #FFFFFF;
+    color: #e7e4e4;
     text-align: center;
-    margin-top: auto;  /* Faz o rodapé ficar no final */
-    padding: 10px;          /* Diminui o espaço interno */
-    margin: 5px;            /* Diminui o espaço externo */
-    line-height: 1.2;       /* Diminui o espaço entre as linhas de texto */
-    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões totais */
+    margin-top: auto;
+    /* Faz o rodapé ficar no final */
+    padding: 10px;
+    /* Diminui o espaço interno */
+    margin: 5px;
+    /* Diminui o espaço externo */
+    line-height: 1.2;
+    /* Diminui o espaço entre as linhas de texto */
+    box-sizing: border-box;
+    /* Garante que o padding e a borda sejam incluídos nas dimensões totais */
 }
 
 /* Responsividade para o rodapé */
@@ -94,52 +114,65 @@ footer {
 
     /* Ajusta o layout do rodapé */
     footer {
-        padding: 20px; /* Aumenta o padding para dar mais espaçamento */
-        margin: 10px 5px; /* Ajuste das margens */
-        text-align: center; /* Garante o alinhamento central do conteúdo */
+        padding: 20px;
+        /* Aumenta o padding para dar mais espaçamento */
+        margin: 10px 5px;
+        /* Ajuste das margens */
+        text-align: center;
+        /* Garante o alinhamento central do conteúdo */
     }
 
     /* Ajustes na seção de redes sociais */
     .info-redes-sociais {
-        padding: 20px 10px; /* Reduz o padding para caber melhor em telas pequenas */
+        padding: 20px 10px;
+        /* Reduz o padding para caber melhor em telas pequenas */
     }
 
     .info-conteudo h2 {
-        font-size: 20px; /* Reduz o tamanho do título */
+        font-size: 20px;
+        /* Reduz o tamanho do título */
         margin-bottom: 10px;
     }
 
     .info-conteudo p {
-        font-size: 16px; /* Reduz o tamanho da descrição */
+        font-size: 16px;
+        /* Reduz o tamanho da descrição */
     }
 
     /* Ícones das redes sociais */
     .social-icon {
-        margin: 0 10px; /* Diminui o espaço entre os ícones */
+        margin: 0 10px;
+        /* Diminui o espaço entre os ícones */
     }
 
     .social-icon img {
-        width: 30px; /* Reduz o tamanho dos ícones */
+        width: 30px;
+        /* Reduz o tamanho dos ícones */
         height: 30px;
     }
 
     .informacoes-adicionais p {
-        font-size: 14px; /* Reduz o tamanho do texto adicional */
+        font-size: 14px;
+        /* Reduz o tamanho do texto adicional */
     }
 
     .informacoes-adicionais strong {
-        font-size: 16px; /* Ajuste no tamanho do texto em negrito */
+        font-size: 16px;
+        /* Ajuste no tamanho do texto em negrito */
     }
 
     /* Ajuste no link do WhatsApp */
     .info-whatsapp-2 {
-        font-size: 14px; /* Reduz o tamanho da fonte */
-        padding: 5px 8px; /* Ajuste no padding */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte */
+        padding: 5px 8px;
+        /* Ajuste no padding */
     }
 
     /* Ícones do WhatsApp */
     .social-icon-2 {
-        width: 20px; /* Reduz o tamanho do ícone do WhatsApp */
+        width: 20px;
+        /* Reduz o tamanho do ícone do WhatsApp */
         height: 20px;
     }
 
@@ -150,7 +183,8 @@ footer {
 
     /* Alinhamento das informações no footer */
     .redes-sociais {
-        margin-bottom: 15px; /* Diminui o espaçamento abaixo das redes sociais */
+        margin-bottom: 15px;
+        /* Diminui o espaçamento abaixo das redes sociais */
     }
 }
 
@@ -159,34 +193,62 @@ footer {
 
     /* Reduz ainda mais o tamanho do rodapé */
     footer {
-        padding: 15px 10px; /* Menos padding */
+        padding: 15px 10px;
+        /* Menos padding */
     }
 
     /* Ajuste para que o texto não fique esmagado */
     .info-conteudo h2 {
-        font-size: 18px; /* Tamanho menor para telas menores */
+        font-size: 18px;
+        /* Tamanho menor para telas menores */
     }
 
     .info-conteudo p {
-        font-size: 14px; /* Menor ainda para caber melhor */
+        font-size: 14px;
+        /* Menor ainda para caber melhor */
     }
 
     .social-icon img {
-        width: 25px; /* Ícones menores */
+        width: 25px;
+        /* Ícones menores */
         height: 25px;
     }
 
     .informacoes-adicionais p {
-        font-size: 13px; /* Texto ainda menor */
+        font-size: 13px;
+        /* Texto ainda menor */
     }
 
     .info-whatsapp-2 {
-        font-size: 13px; /* Tamanho da fonte menor para caber melhor */
-        padding: 4px 7px; /* Ajuste do padding */
+        font-size: 13px;
+        /* Tamanho da fonte menor para caber melhor */
+        padding: 4px 7px;
+        /* Ajuste do padding */
     }
 
     .social-icon-2 {
-        width: 18px; /* Ícone do WhatsApp ainda menor */
+        width: 18px;
+        /* Ícone do WhatsApp ainda menor */
         height: 18px;
     }
+}
+
+.mh {
+  display: inline-block;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  cursor: pointer;
+  line-height: 0;       /* remove espaço abaixo */
+  vertical-align: middle;
+}
+
+.mh:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.mh svg {
+  fill: #e7e4e4;          /* deixa as letras do SVG brancas */
+  display: block;
 }

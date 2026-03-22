@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gilmar Móveis</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/icons/favicon1.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,8 +24,8 @@
         <?php include '../tools/footer.html'; ?>
     </div>
 
-    <script src="../js/products.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

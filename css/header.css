@@ -51,30 +51,6 @@
     font-size: 14px;
 }
 
-.menu-top-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-    /* Espaço entre os itens */
-}
-
-.menu-top-list li a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.menu-top-list li a:hover {
-    color: #555;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.3s ease;
-
-}
-
-
 .info-inner {
     display: flex;
     gap: 15px;
@@ -277,5 +253,31 @@ nav ul li a {
     .logo img {
         max-width: 150px;
         height: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-header {
+        top: 70px; /* Ajuste a distância do topo */
+    }
+
+    .container-12 {
+        align-items: center;
+        padding: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .grid-6 {
+        display: none;
+    }
+
+    .mobile-header {
+        top: 35px; /* Ajuste a distância do topo */
+    }
+
+    .search-field,
+    .btn-text {
+        font-size: 12px;
     }
 }

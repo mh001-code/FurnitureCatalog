@@ -13,11 +13,35 @@
     padding-bottom: auto;
 }
 
+.menu-top-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    /* Espaço entre os itens */
+}
+
+.menu-top-list li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menu-top-list li a:hover {
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+
+}
+
 .menu-category-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .menu-category-list>li {
@@ -92,6 +116,10 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+    
+    .element-menu-category {
+        padding: 0;
+    }
 
     /* Menu hambúrguer */
     .menu-icon {
@@ -227,5 +255,11 @@
 
     .menu-category-list ul a:hover {
         background: #09b6bc;
+    }
+}
+
+@media (max-width: 320px) {
+    .menu-category-inner {
+        top: 18px;
     }
 }

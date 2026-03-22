@@ -6,7 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gilmar Móveis</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/icons/favicon1.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,7 +25,18 @@
         <h1 id="nome-produto"></h1>
 
         <div class="imagem-e-preco">
-            <img id="imagem-produto" src="" alt="">
+            <div class="galeria-imagens">
+                <img id="imagem-principal" src="" alt="">
+                <!-- Modal para zoom da imagem -->
+                <div id="zoomModal" class="modal" onclick="fecharZoom(event)">
+                    <span class="fechar-btn" onclick="fecharZoom(event)">✕</span>
+                    <img id="imagemZoomada" class="imagem-zoomada" src="" alt="">
+                </div>
+
+                <div class="miniaturas"></div>
+            </div>
+
+
             <div class="preco-e-aviso">
                 <p id="preco-produto"></p>
                 <p id="aviso-parcelamento" class="aviso-parcelamento"></p>
@@ -42,8 +54,8 @@
         <?php include '../tools/footer.html'; ?>
     </div>
 
-    <script src="../js/product.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

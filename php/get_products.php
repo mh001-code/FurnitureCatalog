@@ -10,10 +10,11 @@ $subcategoria = $_GET['subcategoria'] ?? '';
 
 try {
     // Consulta SQL com base nos parâmetros
-    $sql = "SELECT * FROM produtos WHERE categoria = :categoria ORDER BY id DESC;";
-    if (!empty($subcategoria)) {
-        $sql .= " AND subcategoria = :subcategoria";
-    }
+    $sql = "SELECT * FROM produtos WHERE categoria = :categoria";
+        if (!empty($subcategoria)) {
+            $sql .= " AND subcategoria = :subcategoria";
+        }
+    $sql .= " ORDER BY preco ASC;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':categoria', $categoria);

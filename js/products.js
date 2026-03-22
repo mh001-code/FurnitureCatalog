@@ -1,7 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const categoria = params.get('categoria');
-  const subcategoria = params.get('subcategoria'); // pode ser null
+
+  console.log("URL Path:", window.location.pathname);
+
+  // Captura o caminho da URL
+  const path = window.location.pathname; // ex: /produtos/quarto/guarda-roupas
+  const partes = path.split("/").filter(p => p); // remove elementos vazios
+
+  let categoria = null;
+  let subcategoria = null;
+
+  const produtosIndex = partes.indexOf("produtos");
+  if (produtosIndex !== -1) {
+    categoria = partes[produtosIndex + 1] || null;
+    subcategoria = partes[produtosIndex + 2] || null;
+  }
+
+  console.log("Categoria:", categoria);
+  console.log("Subcategoria:", subcategoria);
+
 
   // Função para formatar título
   function formatarTitulo(texto) {
@@ -28,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   titulo.textContent = tituloPagina;
 
   // Buscar produtos do PHP
-  let url = `../php/get_products.php?categoria=${encodeURIComponent(categoria)}`;
+  let url = `/php/get_products.php?categoria=${encodeURIComponent(categoria)}`;
   if (subcategoria) {
     url += `&subcategoria=${encodeURIComponent(subcategoria)}`;
   }
@@ -50,35 +66,75 @@ function renderizarProdutos(produtos) {
   container.innerHTML = "";
 
   if (!produtos || produtos.length === 0) {
-    container.innerHTML = "<p>Nenhum produto encontrado.</p>";
+    container.innerHTML = "<h2>Nenhum produto encontrado.</h2>";
     return;
   }
+
+  // Função para remover acentos de strings
+function removerAcentos(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function slugify(texto) {
+  return texto
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // remove acentos
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')                    // remove caracteres especiais
+    .replace(/\s+/g, '-')                            // troca espaços por hífen
+    .replace(/-+/g, '-')                             // evita hífens duplicados
+    .trim();                                         // remove espaços das pontas
+}
 
   produtos.forEach(produto => {
     let preco = parseFloat(produto.preco);
     let valorFormatado = preco.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     let valorParcela = Math.floor((produto.preco / 5) * 100) / 100;
     let valorParcelaFormatado = valorParcela.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    let desconto = produto.preco * 0.10;
-    let valorDesconto = produto.preco - desconto;
-    let valorDescontoFormatado = valorDesconto.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-    const card = document.createElement("div");
-    card.className = "product"; // Usa a classe que já está estilizada no CSS
-    card.innerHTML = `
-      <a href="../pages/product.php?id=${produto.id}">
-      <img src="${produto.imagem}" alt="${produto.nome}">
-      <h3>${produto.nome}</h3>
+    let imgClass = "";
+    let precoHTML = `
       <p class="preco"><strong>R$ ${valorFormatado}</strong></p>
       <p class="parcelamento">ou em 5x de R$ ${valorParcelaFormatado}</p>
-      <br>
-      <br>
-      <span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>
-      </p>
     `;
+    let acrescimoHTML = `<span class="acrescimo">Acima de 5x sujeito a acréscimo.</span>`;
+    let nomeSlug = slugify(produto.nome);
+
+    let detalhesHTML = `<a href="/produto/${produto.id}/${nomeSlug}">
+                      <button class="btn-ver-mais">Detalhes</button>
+                    </a>`;
+
+
+    let br = '<br>';
+
+    if (produto.indisponivel == 1) {
+      imgClass = "img-indisponivel";
+      precoHTML = "";  // Remove o preço
+      acrescimoHTML = "";
+      indisponivelTexto = `<p class="indisponivel-text">Produto Indisponível</p>`;
+      detalhesHTML = `<button class="btn-ver-mais indisponivel" disabled>Indisponível</button>`;
+    } else {
+      indisponivelTexto = "";  // Quando estiver disponível, não mostra
+    }
+
+    const card = document.createElement("div");
+    card.className = "product";
+
+    card.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}" class="${imgClass}">
+      <h3>${produto.nome}</h3>
+      ${precoHTML}
+      <br>
+      ${acrescimoHTML}
+      <br>
+      ${indisponivelTexto}
+      <br>
+      ${detalhesHTML}
+    `;
+
     container.appendChild(card);
   });
 }
+
 
 const form = document.getElementById('product-form');
 

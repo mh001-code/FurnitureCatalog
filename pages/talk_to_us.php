@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gilmar Móveis - Fale Conosco</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="/img/icons/favicon1.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,8 +25,8 @@
 
         <h2>Entre em Contato</h2>
         <ul>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.link/0osv00" target="_blank">(62) 99312-2941</a></li>
-            <li><strong>E-mail:</strong> contato@seudominio.com.br</li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.link/0osv00" target="_blank" class="info-whatsapp-2">(62) 99312-2941</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:gilmargpgcs25@gmail.com" class="email"> gilmargpgcs25@gmail.com</a></li>
             <li><strong>Localização:</strong> Trindade, Goiás</li>
         </ul>
 
